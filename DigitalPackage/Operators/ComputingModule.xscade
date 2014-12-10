@@ -1,0 +1,693 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1" kind="node" name="ComputingModule">
+	<inputs>
+		<Variable name="handle">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3eb5/900/504/54881d225bcd"/>
+			</pragmas>
+		</Variable>
+		<Variable name="analogical_switch">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3ebc/900/504/54881d28530b"/>
+			</pragmas>
+		</Variable>
+		<Variable name="gear_extended">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3eda/900/504/54881d6b58b1"/>
+			</pragmas>
+		</Variable>
+		<Variable name="gear_retracted">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3ee1/900/504/54881d78747"/>
+			</pragmas>
+		</Variable>
+		<Variable name="gear_shock_absorber">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3ee8/900/504/54881daa4ab2"/>
+			</pragmas>
+		</Variable>
+		<Variable name="door_closed">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3eef/900/504/54881dc274df"/>
+			</pragmas>
+		</Variable>
+		<Variable name="door_open">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3ef6/900/504/54881dcb7273"/>
+			</pragmas>
+		</Variable>
+		<Variable name="circuit_pressurized">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3efd/900/504/54881dd46ebc"/>
+			</pragmas>
+		</Variable>
+	</inputs>
+	<outputs>
+		<Variable name="general_EV">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3f04/900/504/54881ea66557"/>
+			</pragmas>
+		</Variable>
+		<Variable name="close_EV">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3f0a/900/504/54881ec45a49"/>
+			</pragmas>
+		</Variable>
+		<Variable name="open_EV">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3f10/900/504/54881ec85c14"/>
+			</pragmas>
+		</Variable>
+		<Variable name="retract_EV">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3f16/900/504/54881ecb4c08"/>
+			</pragmas>
+		</Variable>
+		<Variable name="extend_EV">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3f1c/900/504/54881ed11585"/>
+			</pragmas>
+		</Variable>
+		<Variable name="gears_locked_down">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3f22/900/504/54881f4566b4"/>
+			</pragmas>
+		</Variable>
+		<Variable name="gears_maneuvering">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3f28/900/504/54881f5244aa"/>
+			</pragmas>
+		</Variable>
+		<Variable name="anomaly">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3f2e/900/504/54881f552c53"/>
+			</pragmas>
+		</Variable>
+	</outputs>
+	<locals>
+		<Variable name="_L4">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3eb7/900/504/54881d22557b"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L5">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3ebe/900/504/54881d284b65"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L9">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3edc/900/504/54881d6b5ca"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L10">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3ee3/900/504/54881d784bfa"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L11">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3eea/900/504/54881daa11ed"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L12">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3ef1/900/504/54881dc26b6b"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L13">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3ef8/900/504/54881dcb56d8"/>
+			</pragmas>
+		</Variable>
+		<Variable name="_L14">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/3eff/900/504/54881dd44076"/>
+			</pragmas>
+		</Variable>
+	</locals>
+	<data>
+		<!-- _L4 = handle; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L4"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="handle"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3eb6/900/504/54881d22142b"/>
+			</pragmas>
+		</Equation>
+		<!-- _L5 = analogical_switch; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L5"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="analogical_switch"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3ebd/900/504/54881d283666"/>
+			</pragmas>
+		</Equation>
+		<!-- _L9 = gear_extended; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L9"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="gear_extended"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3edb/900/504/54881d6b2700"/>
+			</pragmas>
+		</Equation>
+		<!-- _L10 = gear_retracted; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L10"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="gear_retracted"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3ee2/900/504/54881d7834a"/>
+			</pragmas>
+		</Equation>
+		<!-- _L11 = gear_shock_absorber; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L11"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="gear_shock_absorber"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3ee9/900/504/54881daa595"/>
+			</pragmas>
+		</Equation>
+		<!-- _L12 = door_closed; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L12"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="door_closed"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3ef0/900/504/54881dc2682f"/>
+			</pragmas>
+		</Equation>
+		<!-- _L13 = door_open; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L13"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="door_open"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3ef7/900/504/54881dcb2991"/>
+			</pragmas>
+		</Equation>
+		<!-- _L14 = circuit_pressurized; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="_L14"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="circuit_pressurized"/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3efe/900/504/54881dd44892"/>
+			</pragmas>
+		</Equation>
+		<!-- general_EV = _null; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="general_EV"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<NullRef/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3f05/900/504/54881ea624a"/>
+			</pragmas>
+		</Equation>
+		<!-- close_EV = _null; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="close_EV"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<NullRef/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3f0b/900/504/54881ec45d61"/>
+			</pragmas>
+		</Equation>
+		<!-- open_EV = _null; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="open_EV"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<NullRef/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3f11/900/504/54881ec81a25"/>
+			</pragmas>
+		</Equation>
+		<!-- retract_EV = _null; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="retract_EV"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<NullRef/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3f17/900/504/54881ecb7edc"/>
+			</pragmas>
+		</Equation>
+		<!-- extend_EV = _null; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="extend_EV"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<NullRef/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3f1d/900/504/54881ed17df1"/>
+			</pragmas>
+		</Equation>
+		<!-- gears_locked_down = _null; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="gears_locked_down"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<NullRef/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3f23/900/504/54881f454242"/>
+			</pragmas>
+		</Equation>
+		<!-- gears_maneuvering = _null; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="gears_maneuvering"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<NullRef/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3f29/900/504/54881f527d3d"/>
+			</pragmas>
+		</Equation>
+		<!-- anomaly = _null; -->
+		<Equation>
+			<lefts>
+				<VariableRef name="anomaly"/>
+			</lefts>
+			<right>
+				<IdExpression>
+					<path>
+						<NullRef/>
+					</path>
+				</IdExpression>
+			</right>
+			<pragmas>
+				<ed:Equation oid="!ed/3f2f/900/504/54881f55296"/>
+			</pragmas>
+		</Equation>
+	</data>
+	<pragmas>
+		<ed:Operator oid="!ed/3e9e/900/504/54881c0e659c" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
+			<diagrams>
+				<NetDiagram name="diagram_ComputingModule_1" landscape="true" format="A4 (210 297)" oid="!ed/3e9f/900/504/54881c0e3298">
+					<presentationElements>
+						<EquationGE presentable="!ed/3eb6/900/504/54881d22142b">
+							<position>
+								<Point x="3466" y="926"/>
+							</position>
+							<size>
+								<Size width="264" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3ebd/900/504/54881d283666">
+							<position>
+								<Point x="3572" y="2619"/>
+							</position>
+							<size>
+								<Size width="264" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3edb/900/504/54881d6b2700">
+							<position>
+								<Point x="3572" y="4260"/>
+							</position>
+							<size>
+								<Size width="265" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3ee2/900/504/54881d7834a">
+							<position>
+								<Point x="3545" y="5027"/>
+							</position>
+							<size>
+								<Size width="265" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3ee9/900/504/54881daa595">
+							<position>
+								<Point x="3651" y="6138"/>
+							</position>
+							<size>
+								<Size width="265" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3ef0/900/504/54881dc2682f">
+							<position>
+								<Point x="3651" y="8043"/>
+							</position>
+							<size>
+								<Size width="265" height="502"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3ef7/900/504/54881dcb2991">
+							<position>
+								<Point x="3545" y="8811"/>
+							</position>
+							<size>
+								<Size width="264" height="502"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3efe/900/504/54881dd44892">
+							<position>
+								<Point x="3519" y="10134"/>
+							</position>
+							<size>
+								<Size width="265" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3f05/900/504/54881ea624a">
+							<position>
+								<Point x="25374" y="794"/>
+							</position>
+							<size>
+								<Size width="318" height="502"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3f0b/900/504/54881ec45d61">
+							<position>
+								<Point x="25294" y="2117"/>
+							</position>
+							<size>
+								<Size width="318" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3f11/900/504/54881ec81a25">
+							<position>
+								<Point x="25347" y="2831"/>
+							</position>
+							<size>
+								<Size width="317" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3f17/900/504/54881ecb7edc">
+							<position>
+								<Point x="25400" y="3969"/>
+							</position>
+							<size>
+								<Size width="318" height="502"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3f1d/900/504/54881ed17df1">
+							<position>
+								<Point x="25374" y="4683"/>
+							</position>
+							<size>
+								<Size width="318" height="502"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3f23/900/504/54881f454242">
+							<position>
+								<Point x="25294" y="6985"/>
+							</position>
+							<size>
+								<Size width="317" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3f29/900/504/54881f527d3d">
+							<position>
+								<Point x="25294" y="7726"/>
+							</position>
+							<size>
+								<Size width="318" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE presentable="!ed/3f2f/900/504/54881f55296">
+							<position>
+								<Point x="25321" y="8573"/>
+							</position>
+							<size>
+								<Size width="318" height="503"/>
+							</size>
+						</EquationGE>
+					</presentationElements>
+				</NetDiagram>
+			</diagrams>
+		</ed:Operator>
+	</pragmas>
+</Operator>
