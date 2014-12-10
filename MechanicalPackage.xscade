@@ -2,6 +2,9 @@
 <File xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1">
 	<declarations>
 		<Package name="MechanicalPackage">
+			<declarations>
+				<Operator name="ElectroValve" href="ElectroValve.xscade"/>
+			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/1f49/958/760/548818641e64" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
 					<diagrams>
