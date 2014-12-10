@@ -1,0 +1,42 @@
+
+[STUDIO\TOOLS\CONFIGURATIONS\Checker]
+
+"\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="KCG" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Code Generator]
+
+"\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="Simulation" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Design Verifier]
+
+"\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="KCG" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Reporter]
+
+"\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="HTML" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Timing and Stack Verifiers]
+
+"\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="Timing and Stack" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\DiffAnalyzer]
+
+"\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="KCG" 
+
+[STUDIO\TOOLS\CONFIGURATIONS\Instrumenter]
+
+"\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="MTC" 
+
+[SCADE\Editor\Shortcut]
+
+"groupNb"="0" 
+
+[SCADE\Editor\Tool]
+
+"UsePolyline"="false" 
+"TransitionKind"="strong" 
+
+[SCADE\Diff\Tool]
+
+"LastProject1"="" 
+"LastProject2"="" 
