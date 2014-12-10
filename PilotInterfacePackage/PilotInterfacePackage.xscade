@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1">
+	<declarations>
+		<Package name="PilotInterfacePackage">
+			<pragmas>
+				<ed:Package oid="!ed/1f55/958/760/548819284971" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
+					<diagrams>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/1f56/958/760/5488192830f8" blockKind="constants"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/1f57/958/760/5488192871ea" blockKind="types"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/1f58/958/760/548819283bf1" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>
