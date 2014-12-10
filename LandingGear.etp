@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="90" defaultConfiguration="21">
+<Project id="1" oid_count="93" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -262,9 +262,9 @@
 			<elements>
 				<Folder id="12" extensions="xscade;scade" name="Separate Files">
 					<elements>
-						<FileRef id="89" persistAs="ElectroValve.xscade">
+						<FileRef id="92" persistAs="MechanicalPackage\Operators\ElectroValve.xscade">
 							<props>
-								<Prop id="88" name="@SCADE:NONROOT">
+								<Prop id="91" name="@SCADE:NONROOT">
 									<value>true</value>
 								</Prop>
 							</props>
@@ -272,8 +272,8 @@
 					</elements>
 				</Folder>
 				<FileRef id="83" persistAs="DigitalPackage.xscade"/>
-				<FileRef id="84" persistAs="MechanicalPackage.xscade"/>
 				<FileRef id="85" persistAs="PilotInterfacePackage.xscade"/>
+				<FileRef id="93" persistAs="MechanicalPackage\MechanicalPackage.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="73" name="Design Verifier File">
