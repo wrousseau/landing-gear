@@ -242,10 +242,6 @@
 		<Prop id="82" name="@SCADE:CHECKED">
 			<value>false</value>
 		</Prop>
-		<Prop id="90" name="@GENERATOR:ROOTNODE">
-			<value>DigitalPackage::GenericMonitoring</value>
-			<configuration>21</configuration>
-		</Prop>
 	</props>
 	<roots>
 		<Folder id="3" extensions="vsp;etp" name="SCADE Libraries">

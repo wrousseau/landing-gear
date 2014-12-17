@@ -2,30 +2,37 @@
 [STUDIO\TOOLS\CONFIGURATIONS\Checker]
 
 "\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="KCG" 
+"C:\\Documents and Settings\\SI\\Bureau\\landing-gear\\LandingGear.etp"="KCG" 
 
 [STUDIO\TOOLS\CONFIGURATIONS\Code Generator]
 
 "\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="Simulation" 
+"C:\\Documents and Settings\\SI\\Bureau\\landing-gear\\LandingGear.etp"="Simulation" 
 
 [STUDIO\TOOLS\CONFIGURATIONS\Design Verifier]
 
 "\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="KCG" 
+"C:\\Documents and Settings\\SI\\Bureau\\landing-gear\\LandingGear.etp"="KCG" 
 
 [STUDIO\TOOLS\CONFIGURATIONS\Reporter]
 
 "\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="HTML" 
+"C:\\Documents and Settings\\SI\\Bureau\\landing-gear\\LandingGear.etp"="HTML" 
 
 [STUDIO\TOOLS\CONFIGURATIONS\Timing and Stack Verifiers]
 
 "\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="Timing and Stack" 
+"C:\\Documents and Settings\\SI\\Bureau\\landing-gear\\LandingGear.etp"="Timing and Stack" 
 
 [STUDIO\TOOLS\CONFIGURATIONS\DiffAnalyzer]
 
 "\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="KCG" 
+"C:\\Documents and Settings\\SI\\Bureau\\landing-gear\\LandingGear.etp"="KCG" 
 
 [STUDIO\TOOLS\CONFIGURATIONS\Instrumenter]
 
 "\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="MTC" 
+"C:\\Documents and Settings\\SI\\Bureau\\landing-gear\\LandingGear.etp"="MTC" 
 
 [SCADE\Editor\Shortcut]
 
@@ -40,3 +47,30 @@
 
 "LastProject1"="" 
 "LastProject2"="" 
+
+[SCADE\Simulator\Simulation]
+
+"Latency"="200" 
+"RefreshRate"="1" 
+
+[SCADE\Simulator\Watch]
+
+"Count"="0" 
+
+[SCADE\Simulator\Graph]
+
+"Graph1"="DigitalPackage::GenericMonitoring/x/" 
+"Graph2"="DigitalPackage::GenericMonitoring/error/" 
+"Count"="2" 
+
+[SCADE\Simulator\ControlBreakpoint]
+
+"Count"="0" 
+
+[SCADE\Simulator\DataBreakpoint]
+
+"Count"="0" 
+
+[SCADE\Simulator\TclBreakpoint]
+
+"Count"="0" 

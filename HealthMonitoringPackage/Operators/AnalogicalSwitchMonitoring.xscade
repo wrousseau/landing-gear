@@ -40,10 +40,116 @@
 			</pragmas>
 		</Variable>
 	</outputs>
+	<data>
+		<StateMachine name="SM1">
+			<states>
+				<State name="State1">
+					<unless>
+						<Transition kind="restart">
+							<target>
+								<StateRef name="State2"/>
+							</target>
+							<condition>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="switchOpened"/>
+									</path>
+								</IdExpression>
+							</condition>
+							<pragmas>
+								<ed:Transition oid="!ed/22d8/B8E/B34/549163776dd3"/>
+							</pragmas>
+						</Transition>
+					</unless>
+					<pragmas>
+						<ed:State oid="!ed/22bc/B8E/B34/549162a2396a"/>
+					</pragmas>
+				</State>
+				<State name="State2">
+					<pragmas>
+						<ed:State oid="!ed/22c2/B8E/B34/549162a3575e"/>
+					</pragmas>
+				</State>
+				<State name="State3">
+					<pragmas>
+						<ed:State oid="!ed/22c8/B8E/B34/549162a555c2"/>
+					</pragmas>
+				</State>
+				<State name="State4">
+					<pragmas>
+						<ed:State oid="!ed/22ce/B8E/B34/549162a6588c"/>
+					</pragmas>
+				</State>
+			</states>
+			<pragmas>
+				<ed:StateMachine oid="!ed/22b6/B8E/B34/5491628c1727"/>
+			</pragmas>
+		</StateMachine>
+	</data>
 	<pragmas>
 		<ed:Operator oid="!ed/1faf/B8E/B34/54914cc87ca4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
 			<diagrams>
-				<NetDiagram name="diagram_AnalogicalSwitchMonitoring_1" landscape="true" format="A4 (210 297)" oid="!ed/1fb0/B8E/B34/54914cc839cd"/>
+				<NetDiagram name="diagram_AnalogicalSwitchMonitoring_1" landscape="true" format="A4 (210 297)" oid="!ed/1fb0/B8E/B34/54914cc839cd">
+					<presentationElements>
+						<StateMachineGE presentable="!ed/22b6/B8E/B34/5491628c1727">
+							<position>
+								<Point x="4471" y="1032"/>
+							</position>
+							<size>
+								<Size width="20796" height="11615"/>
+							</size>
+						</StateMachineGE>
+						<StateGE presentable="!ed/22bc/B8E/B34/549162a2396a">
+							<position>
+								<Point x="5874" y="2778"/>
+							</position>
+							<size>
+								<Size width="1852" height="1773"/>
+							</size>
+						</StateGE>
+						<StateGE presentable="!ed/22c2/B8E/B34/549162a3575e">
+							<position>
+								<Point x="19711" y="2831"/>
+							</position>
+							<size>
+								<Size width="1852" height="1773"/>
+							</size>
+						</StateGE>
+						<StateGE presentable="!ed/22c8/B8E/B34/549162a555c2">
+							<position>
+								<Point x="6059" y="7752"/>
+							</position>
+							<size>
+								<Size width="1852" height="1773"/>
+							</size>
+						</StateGE>
+						<StateGE presentable="!ed/22ce/B8E/B34/549162a6588c">
+							<position>
+								<Point x="18944" y="7408"/>
+							</position>
+							<size>
+								<Size width="1852" height="1773"/>
+							</size>
+						</StateGE>
+						<TransitionGE presentable="!ed/22d8/B8E/B34/549163776dd3">
+							<positions>
+								<Point x="7726" y="3122"/>
+								<Point x="11721" y="3281"/>
+								<Point x="15716" y="3440"/>
+								<Point x="19711" y="3598"/>
+							</positions>
+							<labelSize>
+								<Size width="1535" height="370"/>
+							</labelSize>
+							<labelPos>
+								<Point x="13335" y="2752"/>
+							</labelPos>
+							<slashPos>
+								<Point x="14076" y="2752"/>
+							</slashPos>
+						</TransitionGE>
+					</presentationElements>
+				</NetDiagram>
 			</diagrams>
 		</ed:Operator>
 	</pragmas>

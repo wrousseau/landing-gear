@@ -5,7 +5,7 @@
 			<declarations>
 				<Operator name="GenericMonitoring" href="Operators\GenericMonitoring.xscade"/>
 				<Operator name="AnalogicalSwitchMonitoring" href="Operators\AnalogicalSwitchMonitoring.xscade"/>
-				<Operator name="PressureSensorMonitoring" href="PressureSensorMonitoring.xscade"/>
+				<Operator name="PressureSensorMonitoring" href="Operators\PressureSensorMonitoring.xscade"/>
 			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/2258/B8E/B34/54915f10909" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
