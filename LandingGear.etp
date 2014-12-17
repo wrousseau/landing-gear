@@ -285,7 +285,6 @@
 						</FileRef>
 					</elements>
 				</Folder>
-				<FileRef id="95" persistAs="DigitalPackage\DigitalPackage.xscade"/>
 				<FileRef id="107" persistAs="HealthMonitoringPackage\HealthMonitoringPackage.xscade"/>
 			</elements>
 		</Folder>
