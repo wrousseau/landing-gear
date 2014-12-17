@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<File xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1">
+	<declarations>
+		<Package name="HealthMonitoringPackage">
+			<declarations>
+				<Operator name="GenericMonitoring" href="Operators\GenericMonitoring.xscade"/>
+				<Operator name="AnalogicalSwitchMonitoring" href="Operators\AnalogicalSwitchMonitoring.xscade"/>
+				<Operator name="PressureSensorMonitoring" href="PressureSensorMonitoring.xscade"/>
+			</declarations>
+			<pragmas>
+				<ed:Package oid="!ed/2258/B8E/B34/54915f10909" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
+					<diagrams>
+						<TreeDiagram format="A4 (210 297)" oid="!ed/2259/B8E/B34/54915f1043d1" blockKind="constants"/>
+						<TreeDiagram format="A4 (210 297)" oid="!ed/225a/B8E/B34/54915f105181" blockKind="types"/>
+						<TreeDiagram format="A4 (210 297)" oid="!ed/225b/B8E/B34/54915f102dc6" blockKind="sensors"/>
+					</diagrams>
+				</ed:Package>
+			</pragmas>
+		</Package>
+	</declarations>
+</File>

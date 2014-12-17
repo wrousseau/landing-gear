@@ -2,9 +2,6 @@
 <File xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1">
 	<declarations>
 		<Package name="DigitalPackage">
-			<declarations>
-				<Operator name="GenericMonitoring" href="Operators\GenericMonitoring.xscade"/>
-			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/1f51/958/760/5488188db34" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
 					<diagrams>
