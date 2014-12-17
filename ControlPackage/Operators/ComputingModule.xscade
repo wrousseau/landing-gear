@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1" kind="node" name="ComputingModule">
+	<pragmas>
+		<ed:Operator oid="!ed/1fa1/7272/B40/549166ff472d" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
+			<diagrams>
+				<NetDiagram name="diagram_ComputingModule_1" landscape="true" format="A4 (210 297)" oid="!ed/1fa2/7272/B40/549166ff5af5"/>
+			</diagrams>
+		</ed:Operator>
+	</pragmas>
+</Operator>
