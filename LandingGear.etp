@@ -239,7 +239,7 @@
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="138" name="@GENERATOR:EXPAND_MODE">
-			<value>2</value>
+			<value>ControlPackage::ComputingModule</value>
 			<configuration>21</configuration>
 		</Prop>
 	</props>
