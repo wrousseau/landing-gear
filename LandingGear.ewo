@@ -9,7 +9,7 @@
 
 "\\\\VBOXSVR\\home\\Cours\\B\\B6-1\\landing-gear\\LandingGear.etp"="Simulation" 
 "C:\\Documents and Settings\\SI\\Bureau\\landing-gear\\LandingGear.etp"="Simulation" 
-"C:\\Documents and Settings\\SI\\Mes documents\\landing-gear\\LandingGear.etp"="KCG" 
+"C:\\Documents and Settings\\SI\\Mes documents\\landing-gear\\LandingGear.etp"="Simulation" 
 
 [STUDIO\TOOLS\CONFIGURATIONS\Design Verifier]
 
@@ -68,7 +68,7 @@
 
 "Graph1"="DigitalPackage::GenericMonitoring/x/" 
 "Graph2"="DigitalPackage::GenericMonitoring/error/" 
-"Count"="2" 
+"Count"="0" 
 
 [SCADE\Simulator\ControlBreakpoint]
 
