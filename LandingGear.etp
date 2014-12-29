@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="138" defaultConfiguration="21">
+<Project id="1" oid_count="155" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -235,7 +235,7 @@
 			<value>false</value>
 		</Prop>
 		<Prop id="137" name="@GENERATOR:ROOTNODE">
-			<value>HealthMonitoringPackage::PressureSensorMonitoring</value>
+			<value>ControlPackage::RetractionSequence</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="138" name="@GENERATOR:EXPAND_MODE">
@@ -279,9 +279,23 @@
 								</Prop>
 							</props>
 						</FileRef>
-						<FileRef id="136" persistAs="ControlPackage\Operators\ComputingModule.xscade">
+						<FileRef id="140" persistAs="ControlPackage\Operators\OutgoingSequence.xscade">
 							<props>
-								<Prop id="135" name="@SCADE:NONROOT">
+								<Prop id="139" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="149" persistAs="ControlPackage\Operators\RetractionSequence.xscade">
+							<props>
+								<Prop id="148" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="153" persistAs="ControlPackage\ControlPackage\Operators\RetractionSequence.xscade">
+							<props>
+								<Prop id="152" name="@SCADE:NONROOT">
 									<value>true</value>
 								</Prop>
 							</props>
@@ -290,6 +304,7 @@
 				</Folder>
 				<FileRef id="107" persistAs="HealthMonitoringPackage\HealthMonitoringPackage.xscade"/>
 				<FileRef id="132" persistAs="ControlPackage\ControlPackage.xscade"/>
+				<FileRef id="154" persistAs="ControlPackage\Operator2.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="73" name="Design Verifier File">

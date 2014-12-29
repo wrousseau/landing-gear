@@ -3,14 +3,15 @@
 	<declarations>
 		<Package name="ControlPackage">
 			<declarations>
-				<Operator name="ComputingModule" href="Operators\ComputingModule.xscade"/>
+				<Operator name="OutgoingSequence" href="Operators\OutgoingSequence.xscade"/>
+				<Operator name="RetractionSequence" href="Operators\RetractionSequence.xscade"/>
 			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/1f9b/7272/B40/549166b71967" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
 					<diagrams>
-						<TreeDiagram format="A4 (210 297)" oid="!ed/1f9c/7272/B40/549166b769f5" blockKind="constants"/>
-						<TreeDiagram format="A4 (210 297)" oid="!ed/1f9d/7272/B40/549166b7849" blockKind="types"/>
-						<TreeDiagram format="A4 (210 297)" oid="!ed/1f9e/7272/B40/549166b74105" blockKind="sensors"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/1f9c/7272/B40/549166b769f5" blockKind="constants"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/1f9d/7272/B40/549166b7849" blockKind="types"/>
+						<TreeDiagram landscape="true" format="A4 (210 297)" oid="!ed/1f9e/7272/B40/549166b74105" blockKind="sensors"/>
 					</diagrams>
 				</ed:Package>
 			</pragmas>
