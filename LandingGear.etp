@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="160" defaultConfiguration="21">
+<Project id="1" oid_count="169" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -235,7 +235,7 @@
 			<value>false</value>
 		</Prop>
 		<Prop id="137" name="@GENERATOR:ROOTNODE">
-			<value>HealthMonitoringPackage::GearsMotionMonitoring</value>
+			<value>HealthMonitoringPackage::GearsManeuveringMonitoring</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="138" name="@GENERATOR:EXPAND_MODE">
@@ -335,11 +335,26 @@
 								</Prop>
 							</props>
 						</FileRef>
+						<FileRef id="163" persistAs="HealthMonitoringPackage\Operators\GearsLockedDownMonitoring.xscade">
+							<props>
+								<Prop id="162" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="169" persistAs="HealthMonitoringPackage\Operators\GearsManeuveringMonitoring.xscade">
+							<props>
+								<Prop id="168" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
 					</elements>
 				</Folder>
 				<FileRef id="107" persistAs="HealthMonitoringPackage\HealthMonitoringPackage.xscade"/>
 				<FileRef id="132" persistAs="ControlPackage\ControlPackage.xscade"/>
 				<FileRef id="154" persistAs="ControlPackage\Operator2.xscade"/>
+				<FileRef id="161" persistAs="HealthMonitoringPackage\Operator\GearsLockedDownMonitoring.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="73" name="Design Verifier File">
