@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Operator xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1" kind="node" name="DoorsMotionMonitoring">
 	<inputs>
-		<Variable name="openingElectroValveStimulation">
+		<Variable name="open_EV">
 			<type>
 				<NamedType>
 					<type>
@@ -13,7 +13,7 @@
 				<ed:Variable oid="!ed/6453/47F1/720/54a1652c3e51"/>
 			</pragmas>
 		</Variable>
-		<Variable name="closureElectroValveStimulation">
+		<Variable name="close_EV">
 			<type>
 				<NamedType>
 					<type>
@@ -25,7 +25,7 @@
 				<ed:Variable oid="!ed/6454/47F1/720/54a165371e7b"/>
 			</pragmas>
 		</Variable>
-		<Variable name="frontDoorClosed">
+		<Variable name="front_door_closed">
 			<type>
 				<NamedType>
 					<type>
@@ -37,7 +37,7 @@
 				<ed:Variable oid="!ed/6455/47F1/720/54a16562bb8"/>
 			</pragmas>
 		</Variable>
-		<Variable name="leftDoorClosed">
+		<Variable name="left_door_closed">
 			<type>
 				<NamedType>
 					<type>
@@ -49,7 +49,7 @@
 				<ed:Variable oid="!ed/6456/47F1/720/54a16575733f"/>
 			</pragmas>
 		</Variable>
-		<Variable name="rightDoorClosed">
+		<Variable name="right_door_closed">
 			<type>
 				<NamedType>
 					<type>
@@ -61,7 +61,7 @@
 				<ed:Variable oid="!ed/6457/47F1/720/54a1658165a1"/>
 			</pragmas>
 		</Variable>
-		<Variable name="frontDoorOpen">
+		<Variable name="front_door_open">
 			<type>
 				<NamedType>
 					<type>
@@ -73,7 +73,7 @@
 				<ed:Variable oid="!ed/6458/47F1/720/54a1658c2f8a"/>
 			</pragmas>
 		</Variable>
-		<Variable name="leftDoorOpen">
+		<Variable name="left_door_open">
 			<type>
 				<NamedType>
 					<type>
@@ -85,7 +85,7 @@
 				<ed:Variable oid="!ed/6459/47F1/720/54a165975ad7"/>
 			</pragmas>
 		</Variable>
-		<Variable name="rightDoorOpen">
+		<Variable name="right_door_open">
 			<type>
 				<NamedType>
 					<type>
@@ -99,7 +99,7 @@
 		</Variable>
 	</inputs>
 	<outputs>
-		<Variable name="anomalyDetected">
+		<Variable name="anomaly">
 			<type>
 				<NamedType>
 					<type>
@@ -571,7 +571,7 @@
 				<ed:Equation oid="!ed/644e/47F1/720/54a1652460ce"/>
 			</pragmas>
 		</Equation>
-		<!-- _L1 = frontDoorClosed; -->
+		<!-- _L1 = front_door_closed; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L1"/>
@@ -579,7 +579,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="frontDoorClosed"/>
+						<ConstVarRef name="front_door_closed"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -587,7 +587,7 @@
 				<ed:Equation oid="!ed/645b/47F1/720/54a165b44a9e"/>
 			</pragmas>
 		</Equation>
-		<!-- _L2 = leftDoorClosed; -->
+		<!-- _L2 = left_door_closed; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L2"/>
@@ -595,7 +595,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="leftDoorClosed"/>
+						<ConstVarRef name="left_door_closed"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -603,7 +603,7 @@
 				<ed:Equation oid="!ed/6461/47F1/720/54a165b86ca7"/>
 			</pragmas>
 		</Equation>
-		<!-- _L3 = rightDoorClosed; -->
+		<!-- _L3 = right_door_closed; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L3"/>
@@ -611,7 +611,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="rightDoorClosed"/>
+						<ConstVarRef name="right_door_closed"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -682,7 +682,7 @@
 				<ed:Equation oid="!ed/64a3/47F1/720/54a166339d8"/>
 			</pragmas>
 		</Equation>
-		<!-- _L8 = frontDoorOpen; -->
+		<!-- _L8 = front_door_open; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L8"/>
@@ -690,7 +690,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="frontDoorOpen"/>
+						<ConstVarRef name="front_door_open"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -698,7 +698,7 @@
 				<ed:Equation oid="!ed/64b3/47F1/720/54a1671d55c7"/>
 			</pragmas>
 		</Equation>
-		<!-- _L9 = leftDoorOpen; -->
+		<!-- _L9 = left_door_open; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L9"/>
@@ -706,7 +706,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="leftDoorOpen"/>
+						<ConstVarRef name="left_door_open"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -714,7 +714,7 @@
 				<ed:Equation oid="!ed/64b9/47F1/720/54a16732473c"/>
 			</pragmas>
 		</Equation>
-		<!-- _L10 = rightDoorOpen; -->
+		<!-- _L10 = right_door_open; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L10"/>
@@ -722,7 +722,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="rightDoorOpen"/>
+						<ConstVarRef name="right_door_open"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -793,7 +793,7 @@
 				<ed:Equation oid="!ed/64eb/47F1/720/54a16765318b"/>
 			</pragmas>
 		</Equation>
-		<!-- _L14 = openingElectroValveStimulation; -->
+		<!-- _L14 = open_EV; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L14"/>
@@ -801,7 +801,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="openingElectroValveStimulation"/>
+						<ConstVarRef name="open_EV"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -809,7 +809,7 @@
 				<ed:Equation oid="!ed/64f5/47F1/720/54a1679b536f"/>
 			</pragmas>
 		</Equation>
-		<!-- _L15 = closureElectroValveStimulation; -->
+		<!-- _L15 = close_EV; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L15"/>
@@ -817,7 +817,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="closureElectroValveStimulation"/>
+						<ConstVarRef name="close_EV"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -903,10 +903,10 @@
 				<ed:Equation oid="!ed/6527/47F1/720/54a168105dab"/>
 			</pragmas>
 		</Equation>
-		<!-- anomalyDetected = _L18; -->
+		<!-- anomaly = _L18; -->
 		<Equation>
 			<lefts>
-				<VariableRef name="anomalyDetected"/>
+				<VariableRef name="anomaly"/>
 			</lefts>
 			<right>
 				<IdExpression>

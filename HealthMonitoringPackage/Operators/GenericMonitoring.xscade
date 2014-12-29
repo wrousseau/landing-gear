@@ -51,7 +51,7 @@
 				<ed:Variable oid="!ed/5e75/B74/EC8/549144a57560"/>
 			</pragmas>
 		</Variable>
-		<Variable name="error">
+		<Variable name="anomaly">
 			<type>
 				<NamedType>
 					<type>
@@ -613,10 +613,10 @@
 						</Variable>
 					</locals>
 					<data>
-						<!-- error = _L1; -->
+						<!-- anomaly = _L1; -->
 						<Equation>
 							<lefts>
-								<VariableRef name="error"/>
+								<VariableRef name="anomaly"/>
 							</lefts>
 							<right>
 								<IdExpression>

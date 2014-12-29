@@ -73,7 +73,7 @@
 				<ed:Variable oid="!ed/659d/47F1/720/54a16c187593"/>
 			</pragmas>
 		</Variable>
-		<Variable name="retractionElectroValveStimulation">
+		<Variable name="retract_EV">
 			<type>
 				<NamedType>
 					<type>
@@ -85,7 +85,7 @@
 				<ed:Variable oid="!ed/659e/47F1/720/54a16c2c44f1"/>
 			</pragmas>
 		</Variable>
-		<Variable name="extensionElectroValveStimulation">
+		<Variable name="extend_EV">
 			<type>
 				<NamedType>
 					<type>
@@ -99,7 +99,7 @@
 		</Variable>
 	</inputs>
 	<outputs>
-		<Variable name="anomalyDetected">
+		<Variable name="anomaly">
 			<type>
 				<NamedType>
 					<type>
@@ -655,7 +655,7 @@
 				<ed:Equation oid="!ed/65c4/47F1/720/54a16ca357a9"/>
 			</pragmas>
 		</Equation>
-		<!-- _L8 = retractionElectroValveStimulation; -->
+		<!-- _L8 = retract_EV; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L8"/>
@@ -663,7 +663,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="retractionElectroValveStimulation"/>
+						<ConstVarRef name="retract_EV"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -806,7 +806,7 @@
 				<ed:Equation oid="!ed/6656/47F1/720/54a16de66b57"/>
 			</pragmas>
 		</Equation>
-		<!-- _L17 = extensionElectroValveStimulation; -->
+		<!-- _L17 = extend_EV; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L17"/>
@@ -814,7 +814,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="extensionElectroValveStimulation"/>
+						<ConstVarRef name="extend_EV"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -987,10 +987,10 @@
 				<ed:Equation oid="!ed/670c/47F1/720/54a16ec5722f"/>
 			</pragmas>
 		</Equation>
-		<!-- anomalyDetected = _L25; -->
+		<!-- anomaly = _L25; -->
 		<Equation>
 			<lefts>
-				<VariableRef name="anomalyDetected"/>
+				<VariableRef name="anomaly"/>
 			</lefts>
 			<right>
 				<IdExpression>
@@ -1477,8 +1477,8 @@
 							<positions>
 								<Point x="17304" y="7355"/>
 								<Point x="17992" y="7355"/>
-								<Point x="17992" y="7329"/>
-								<Point x="18706" y="7329"/>
+								<Point x="17992" y="7355"/>
+								<Point x="18706" y="7355"/>
 							</positions>
 						</Edge>
 					</presentationElements>
