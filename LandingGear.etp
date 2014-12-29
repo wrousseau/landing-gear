@@ -235,7 +235,7 @@
 			<value>false</value>
 		</Prop>
 		<Prop id="137" name="@GENERATOR:ROOTNODE">
-			<value>HealthMonitoringPackage::AnalogicalSwitchMonitoring</value>
+			<value>ControlPackage::ComputingModule</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="138" name="@GENERATOR:EXPAND_MODE">
