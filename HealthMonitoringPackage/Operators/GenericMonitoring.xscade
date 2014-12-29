@@ -741,10 +741,10 @@
 								<Point x="23601" y="2170"/>
 							</positions>
 							<labelSize>
-								<Size width="1535" height="370"/>
+								<Size width="3784" height="1905"/>
 							</labelSize>
 							<labelPos>
-								<Point x="11536" y="1402"/>
+								<Point x="9287" y="1402"/>
 							</labelPos>
 							<slashPos>
 								<Point x="12277" y="1402"/>
@@ -758,10 +758,10 @@
 								<Point x="7726" y="12091"/>
 							</positions>
 							<labelSize>
-								<Size width="1535" height="370"/>
+								<Size width="3810" height="1905"/>
 							</labelSize>
 							<labelPos>
-								<Point x="8229" y="7726"/>
+								<Point x="5953" y="7726"/>
 							</labelPos>
 							<slashPos>
 								<Point x="8969" y="7726"/>
@@ -775,10 +775,10 @@
 								<Point x="18653" y="5027"/>
 							</positions>
 							<labelSize>
-								<Size width="1535" height="370"/>
+								<Size width="4498" height="1905"/>
 							</labelSize>
 							<labelPos>
-								<Point x="15981" y="4815"/>
+								<Point x="13018" y="4815"/>
 							</labelPos>
 							<slashPos>
 								<Point x="16722" y="4815"/>
@@ -792,10 +792,10 @@
 								<Point x="22860" y="11721"/>
 							</positions>
 							<labelSize>
-								<Size width="1535" height="370"/>
+								<Size width="3731" height="2223"/>
 							</labelSize>
 							<labelPos>
-								<Point x="12700" y="7143"/>
+								<Point x="10504" y="7144"/>
 							</labelPos>
 							<slashPos>
 								<Point x="13441" y="7144"/>
