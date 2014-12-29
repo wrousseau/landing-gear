@@ -10,6 +10,7 @@
 				<Operator name="UnitMotionMonitoring" href="Operators\UnitMotionMonitoring.xscade"/>
 				<Operator name="TriplicatedMotionMonitoring" href="Operators\TriplicatedMotionMonitoring.xscade"/>
 				<Operator name="GearsMotionMonitoring" href="Operators\GearsMotionMonitoring.xscade"/>
+				<Operator name="GearsLockedDownMonitoring" href="Operators\GearsLockedDownMonitoring.xscade"/>
 			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/2258/B8E/B34/54915f10909" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
