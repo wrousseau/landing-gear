@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Operator xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1" kind="node" name="GenericMonitoring">
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1" kind="node" name="GenericRealMonitoring">
 	<inputs>
 		<Variable name="x1">
 			<type>
@@ -683,7 +683,7 @@
 	<pragmas>
 		<ed:Operator oid="!ed/5e45/B74/EC8/549143ba38e0" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
 			<diagrams>
-				<NetDiagram name="diagram_GenericMonitoring_1" landscape="true" format="A4 (210 297)" oid="!ed/5e46/B74/EC8/549143ba269e">
+				<NetDiagram name="diagram_GenericRealMonitoring_1" landscape="true" format="A4 (210 297)" oid="!ed/5e46/B74/EC8/549143ba269e">
 					<presentationElements>
 						<StateMachineGE presentable="!ed/201a/B8E/B34/549152d846d4">
 							<position>

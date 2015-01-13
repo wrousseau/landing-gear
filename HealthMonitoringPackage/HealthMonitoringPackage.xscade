@@ -3,7 +3,7 @@
 	<declarations>
 		<Package name="HealthMonitoringPackage">
 			<declarations>
-				<Operator name="GenericMonitoring" href="Operators\GenericMonitoring.xscade"/>
+				<Operator name="GenericRealMonitoring" href="Operators\GenericRealMonitoring.xscade"/>
 				<Operator name="AnalogicalSwitchMonitoring" href="Operators\AnalogicalSwitchMonitoring.xscade"/>
 				<Operator name="PressureSensorMonitoring" href="Operators\PressureSensorMonitoring.xscade"/>
 				<Operator name="DoorsMotionMonitoring" href="Operators\DoorsMotionMonitoring.xscade"/>
@@ -13,6 +13,8 @@
 				<Operator name="Monitoring" href="Operators\Monitoring.xscade"/>
 				<Operator name="GearsLockedDownMonitoring" href="Operators\GearsLockedDownMonitoring.xscade"/>
 				<Operator name="GearsManeuveringMonitoring" href="Operators\GearsManeuveringMonitoring.xscade"/>
+				<Operator name="GenericBoolMonitoring" href="Operators\GenericBoolMonitoring.xscade"/>
+				<Operator name="CounterLaunchedByReset" href="Operator12.xscade"/>
 			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/2258/B8E/B34/54915f10909" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">

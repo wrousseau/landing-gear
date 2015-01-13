@@ -63,6 +63,7 @@
 [SCADE\Simulator\Watch]
 
 "Count"="0" 
+"Watch1"="HealthMonitoringPackage::Monitoring/Signal1/" 
 
 [SCADE\Simulator\Graph]
 

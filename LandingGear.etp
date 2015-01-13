@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="169" defaultConfiguration="21">
+<Project id="1" oid_count="186" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -235,12 +235,15 @@
 			<value>false</value>
 		</Prop>
 		<Prop id="137" name="@GENERATOR:ROOTNODE">
-			<value>HealthMonitoringPackage::GearsManeuveringMonitoring</value>
+			<value>HealthMonitoringPackage::AnalogicalSwitchMonitoring</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="138" name="@GENERATOR:EXPAND_MODE">
 			<value>ControlPackage::RetractionSequence</value>
 			<configuration>21</configuration>
+		</Prop>
+		<Prop id="182" name="@MTC:GLOBAL_NUMBER">
+			<value>1</value>
 		</Prop>
 	</props>
 	<roots>
@@ -258,13 +261,6 @@
 			<elements>
 				<Folder id="12" extensions="xscade;scade" name="Separate Files">
 					<elements>
-						<FileRef id="117" persistAs="HealthMonitoringPackage\Operators\GenericMonitoring.xscade">
-							<props>
-								<Prop id="116" name="@SCADE:NONROOT">
-									<value>true</value>
-								</Prop>
-							</props>
-						</FileRef>
 						<FileRef id="125" persistAs="HealthMonitoringPackage\Operators\AnalogicalSwitchMonitoring.xscade">
 							<props>
 								<Prop id="124" name="@SCADE:NONROOT">
@@ -349,6 +345,27 @@
 								</Prop>
 							</props>
 						</FileRef>
+						<FileRef id="173" persistAs="HealthMonitoringPackage\Operators\GenericRealMonitoring.xscade">
+							<props>
+								<Prop id="172" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="179" persistAs="HealthMonitoringPackage\Operators\GenericBoolMonitoring.xscade">
+							<props>
+								<Prop id="178" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="186" persistAs="HealthMonitoringPackage\Operators\CounterLaunchedByReset.xscade">
+							<props>
+								<Prop id="185" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
 					</elements>
 				</Folder>
 				<FileRef id="107" persistAs="HealthMonitoringPackage\HealthMonitoringPackage.xscade"/>
@@ -360,6 +377,11 @@
 		<Folder id="73" name="Design Verifier File">
 			<elements>
 				<FileRef id="74" persistAs="LandingGear.l4"/>
+			</elements>
+		</Folder>
+		<Folder id="184" name="Coverage Files">
+			<elements>
+				<FileRef id="183" persistAs="CF_20150113_1.crf"/>
 			</elements>
 		</Folder>
 	</roots>
