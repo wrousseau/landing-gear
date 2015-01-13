@@ -14,7 +14,7 @@
 				<Operator name="GearsLockedDownMonitoring" href="Operators\GearsLockedDownMonitoring.xscade"/>
 				<Operator name="GearsManeuveringMonitoring" href="Operators\GearsManeuveringMonitoring.xscade"/>
 				<Operator name="GenericBoolMonitoring" href="Operators\GenericBoolMonitoring.xscade"/>
-				<Operator name="CounterLaunchedByReset" href="Operator12.xscade"/>
+				<Operator name="CounterLaunchedByReset" href="Operators\CounterLaunchedByReset.xscade"/>
 			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/2258/B8E/B34/54915f10909" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">

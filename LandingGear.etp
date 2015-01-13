@@ -238,7 +238,7 @@
 			<value>HealthMonitoringPackage::AnalogicalSwitchMonitoring</value>
 			<configuration>21</configuration>
 		</Prop>
-		<Prop id="138" name="@GENERATOR:EXPAND_MODE">
+		<Prop id="138" name="@GENERATOR:ROOTNODE">
 			<value>ControlPackage::RetractionSequence</value>
 			<configuration>21</configuration>
 		</Prop>
@@ -285,13 +285,6 @@
 						<FileRef id="149" persistAs="ControlPackage\Operators\RetractionSequence.xscade">
 							<props>
 								<Prop id="148" name="@SCADE:NONROOT">
-									<value>true</value>
-								</Prop>
-							</props>
-						</FileRef>
-						<FileRef id="153" persistAs="ControlPackage\ControlPackage\Operators\RetractionSequence.xscade">
-							<props>
-								<Prop id="152" name="@SCADE:NONROOT">
 									<value>true</value>
 								</Prop>
 							</props>
@@ -370,8 +363,6 @@
 				</Folder>
 				<FileRef id="107" persistAs="HealthMonitoringPackage\HealthMonitoringPackage.xscade"/>
 				<FileRef id="132" persistAs="ControlPackage\ControlPackage.xscade"/>
-				<FileRef id="154" persistAs="ControlPackage\Operator2.xscade"/>
-				<FileRef id="161" persistAs="HealthMonitoringPackage\Operator\GearsLockedDownMonitoring.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="73" name="Design Verifier File">
