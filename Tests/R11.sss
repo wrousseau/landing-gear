@@ -1,0 +1,8 @@
+### Requirement R11 testing scenario ###
+
+SSM::set ControlPackage::OutgoingSequence/handle false      # Command handle is pushed DOWN
+SSM::cycle 150                                                # Wait for 15 s
+
+# Output validation is done using the simulation output file
+SSM::check ControlPackage::OutgoingSequence/gears_locked_down true
+SSM::check ControlPackage::OutgoingSequence/doors_closed true
