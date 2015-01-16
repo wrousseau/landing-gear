@@ -33,6 +33,13 @@
 					</type>
 				</NamedType>
 			</type>
+			<last>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="gears_locked_down"/>
+					</path>
+				</IdExpression>
+			</last>
 			<pragmas>
 				<ed:Variable oid="!ed/23f5/E0F/940/54b927aa5906"/>
 			</pragmas>
@@ -57,6 +64,13 @@
 					</type>
 				</NamedType>
 			</type>
+			<last>
+				<IdExpression>
+					<path>
+						<ConstVarRef name="doors_closed"/>
+					</path>
+				</IdExpression>
+			</last>
 			<pragmas>
 				<ed:Variable oid="!ed/2349/2993/880/54a17291a2a"/>
 			</pragmas>

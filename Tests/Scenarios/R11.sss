@@ -1,8 +1,27 @@
 ### Requirement R11 testing scenario ###
+### Testing the outgoing sequence S
 
-SSM::set ControlPackage::OutgoingSequence/handle false        # Command handle is pushed DOWN
-SSM::cycle 150                                                # Wait for 15 s
+# Scenario takes place in normal mode
+SSM::set ControlPackage::CommandLine/normal_mode true
 
-# Output validation is done using the simulation output file
-SSM::check ControlPackage::OutgoingSequence/gears_locked_down true
-SSM::check ControlPackage::OutgoingSequence/doors_closed true
+# Initial state should be :
+SSM::set ControlPackage::CommandLine/gears_locked_up true
+SSM::set ControlPackage::CommandLine/doors_closed true
+
+# Initiate outgoing sequence
+SSM::set ControlPackage::CommandLine/handle false
+
+# Doors opening sequence duration : 1.9 s (+20%)
+SSM::cycle 19
+SSM::set ControlPackage::CommandLine/doors_open true
+
+# Gears extending sequence duration : 2.8s (+20%)
+SSM::cycle 28
+SSM::set ControlPackage::CommandLine/gears_locked_down true
+
+# Doors closing sequence duration : 1.9 s (+20%)
+SSM::cycle 19
+SSM::set ControlPackage::CommandLine/doors_closed true
+
+# End sequence
+SSM::cycle 84

@@ -95,6 +95,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<default>
+				<ConstValue value="false"/>
+			</default>
 			<pragmas>
 				<ed:Variable oid="!ed/248f/E0F/940/54b92e35781"/>
 			</pragmas>
@@ -107,6 +110,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<default>
+				<ConstValue value="false"/>
+			</default>
 			<pragmas>
 				<ed:Variable oid="!ed/24a5/E0F/940/54b92f9f7aa9"/>
 			</pragmas>
@@ -119,6 +125,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<default>
+				<ConstValue value="false"/>
+			</default>
 			<pragmas>
 				<ed:Variable oid="!ed/24bb/E0F/940/54b92ff64b62"/>
 			</pragmas>
@@ -131,6 +140,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<default>
+				<ConstValue value="false"/>
+			</default>
 			<pragmas>
 				<ed:Variable oid="!ed/24d1/E0F/940/54b9302679db"/>
 			</pragmas>
@@ -143,6 +155,9 @@
 					</type>
 				</NamedType>
 			</type>
+			<default>
+				<ConstValue value="false"/>
+			</default>
 			<pragmas>
 				<ed:Variable oid="!ed/24d2/E0F/940/54b9302c20b3"/>
 			</pragmas>
@@ -820,11 +835,16 @@
 										<StateRef name="OutgoingSequence"/>
 									</target>
 									<condition>
-										<IdExpression>
-											<path>
-												<ConstVarRef name="handle"/>
-											</path>
-										</IdExpression>
+										<!--  not handle -->
+										<UnaryOp name="2" operator="not">
+											<operand>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="handle"/>
+													</path>
+												</IdExpression>
+											</operand>
+										</UnaryOp>
 									</condition>
 									<pragmas>
 										<ed:ForkBranch oid="!ed/271c/E0F/940/54b937d25b42"/>
@@ -835,16 +855,11 @@
 										<StateRef name="RetractionSequence"/>
 									</target>
 									<condition>
-										<!--  not handle -->
-										<UnaryOp name="1" operator="not">
-											<operand>
-												<IdExpression>
-													<path>
-														<ConstVarRef name="handle"/>
-													</path>
-												</IdExpression>
-											</operand>
-										</UnaryOp>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="handle"/>
+											</path>
+										</IdExpression>
 									</condition>
 									<pragmas>
 										<ed:ForkBranch oid="!ed/2730/E0F/940/54b9391457ec"/>
@@ -860,7 +875,7 @@
 						<ed:State oid="!ed/26f8/E0F/940/54b937a96cd"/>
 					</pragmas>
 				</State>
-				<State name="State0">
+				<State initial="true" name="State0">
 					<unless>
 						<Transition kind="restart">
 							<target>
@@ -1071,23 +1086,23 @@
 						</Edge>
 						<Edge leftVarIndex="4" rightExprIndex="1" srcEquation="!ed/254e/E0F/940/54b934573046" dstEquation="!ed/255d/E0F/940/54b934687b49">
 							<positions>
-								<Point x="26353" y="9208"/>
-								<Point x="26802" y="9208"/>
-								<Point x="26802" y="9208"/>
-								<Point x="27279" y="9208"/>
+								<Point x="26379" y="9234"/>
+								<Point x="26802" y="9234"/>
+								<Point x="26802" y="9234"/>
+								<Point x="27279" y="9234"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="3" rightExprIndex="1" srcEquation="!ed/254e/E0F/940/54b934573046" dstEquation="!ed/258e/E0F/940/54b935266a3c">
 							<positions>
-								<Point x="26353" y="8202"/>
-								<Point x="26802" y="8202"/>
-								<Point x="26802" y="8202"/>
-								<Point x="27279" y="8202"/>
+								<Point x="26379" y="8229"/>
+								<Point x="26802" y="8229"/>
+								<Point x="26802" y="8229"/>
+								<Point x="27279" y="8229"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="2" rightExprIndex="1" srcEquation="!ed/254e/E0F/940/54b934573046" dstEquation="!ed/258f/E0F/940/54b93526304f">
 							<positions>
-								<Point x="26353" y="7197"/>
+								<Point x="26379" y="7197"/>
 								<Point x="26829" y="7197"/>
 								<Point x="26829" y="7197"/>
 								<Point x="27305" y="7197"/>
@@ -1095,7 +1110,7 @@
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/254e/E0F/940/54b934573046" dstEquation="!ed/2584/E0F/940/54b935211c8a">
 							<positions>
-								<Point x="26353" y="6191"/>
+								<Point x="26379" y="6191"/>
 								<Point x="26829" y="6191"/>
 								<Point x="26829" y="6191"/>
 								<Point x="27305" y="6191"/>
@@ -1103,10 +1118,10 @@
 						</Edge>
 						<Edge leftVarIndex="4" rightExprIndex="1" srcEquation="!ed/25bd/E0F/940/54b935a4418" dstEquation="!ed/25ca/E0F/940/54b935a91162">
 							<positions>
-								<Point x="9234" y="9313"/>
-								<Point x="9922" y="9313"/>
-								<Point x="9922" y="9313"/>
-								<Point x="10636" y="9313"/>
+								<Point x="9260" y="9340"/>
+								<Point x="9922" y="9340"/>
+								<Point x="9922" y="9340"/>
+								<Point x="10636" y="9340"/>
 							</positions>
 						</Edge>
 						<EquationGE presentable="!ed/26a1/E0F/940/54b936f032c7">
@@ -1199,7 +1214,7 @@
 						</EquationGE>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/25bd/E0F/940/54b935a4418" dstEquation="!ed/26ca/E0F/940/54b9375b38e">
 							<positions>
-								<Point x="9234" y="6350"/>
+								<Point x="9260" y="6350"/>
 								<Point x="9869" y="6350"/>
 								<Point x="9869" y="6350"/>
 								<Point x="10557" y="6350"/>
@@ -1215,10 +1230,10 @@
 						</EquationGE>
 						<Edge leftVarIndex="2" rightExprIndex="1" srcEquation="!ed/25bd/E0F/940/54b935a4418" dstEquation="!ed/26d0/E0F/940/54b937632688">
 							<positions>
-								<Point x="9234" y="7329"/>
-								<Point x="9843" y="7329"/>
-								<Point x="9843" y="7329"/>
-								<Point x="10583" y="7329"/>
+								<Point x="9260" y="7355"/>
+								<Point x="9843" y="7355"/>
+								<Point x="9843" y="7355"/>
+								<Point x="10583" y="7355"/>
 							</positions>
 						</Edge>
 						<EquationGE presentable="!ed/26d5/E0F/940/54b9376a53e3">
@@ -1231,7 +1246,7 @@
 						</EquationGE>
 						<Edge leftVarIndex="3" rightExprIndex="1" srcEquation="!ed/25bd/E0F/940/54b935a4418" dstEquation="!ed/26d5/E0F/940/54b9376a53e3">
 							<positions>
-								<Point x="9234" y="8334"/>
+								<Point x="9260" y="8334"/>
 								<Point x="9843" y="8334"/>
 								<Point x="9843" y="8334"/>
 								<Point x="10610" y="8334"/>
@@ -1259,7 +1274,7 @@
 								<Point x="13389" y="5133"/>
 							</labelPos>
 							<slashPos>
-								<Point x="14130" y="5133"/>
+								<Point x="14129" y="5133"/>
 							</slashPos>
 						</TransitionGE>
 						<TransitionGE presentable="!ed/271c/E0F/940/54b937d25b42">
@@ -1276,7 +1291,7 @@
 								<Point x="12859" y="6219"/>
 							</labelPos>
 							<slashPos>
-								<Point x="13600" y="6219"/>
+								<Point x="13600" y="6218"/>
 							</slashPos>
 						</TransitionGE>
 						<TransitionGE presentable="!ed/2730/E0F/940/54b9391457ec">
@@ -1293,7 +1308,7 @@
 								<Point x="16722" y="5902"/>
 							</labelPos>
 							<slashPos>
-								<Point x="17463" y="5902"/>
+								<Point x="17463" y="5900"/>
 							</slashPos>
 						</TransitionGE>
 						<StateGE presentable="!ed/2751/E0F/940/54b93991517c">

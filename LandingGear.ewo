@@ -57,7 +57,7 @@
 
 [SCADE\Simulator\Simulation]
 
-"Latency"="200" 
+"Latency"="100" 
 "RefreshRate"="1" 
 
 [SCADE\Simulator\Watch]
