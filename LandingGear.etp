@@ -235,7 +235,7 @@
 			<value>false</value>
 		</Prop>
 		<Prop id="137" name="@GENERATOR:ROOTNODE">
-			<value>HealthMonitoringPackage::AnalogicalSwitchMonitoring</value>
+			<value>Main</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="138" name="@GENERATOR:ROOTNODE">
@@ -355,6 +355,13 @@
 						<FileRef id="201" persistAs="UtilsPackage\Operators\CounterLaunchedByReset.xscade">
 							<props>
 								<Prop id="200" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="190" persistAs="ControlPackage\CommandLine.xscade">
+							<props>
+								<Prop id="189" name="@SCADE:NONROOT">
 									<value>true</value>
 								</Prop>
 							</props>

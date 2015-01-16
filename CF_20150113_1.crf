@@ -67,7 +67,6 @@
 						</StateMachine>
 					</controls>
 				</Operator>
-				<Operator index="32" name="HealthMonitoringPackage::GearsLockedDownMonitoring"/>
 				<Operator index="33" name="HealthMonitoringPackage::GearsManeuveringMonitoring"/>
 				<Operator index="34" name="HealthMonitoringPackage::GenericBoolMonitoring">
 					<controls>
@@ -101,7 +100,7 @@
 						</StateMachine>
 					</controls>
 				</Operator>
-				<Operator index="48" name="HealthMonitoringPackage::CounterLaunchedByReset">
+				<Operator index="48" name="Utils::CounterLaunchedByReset">
 					<controls>
 						<StateMachine index="49" name="SM1">
 							<children>

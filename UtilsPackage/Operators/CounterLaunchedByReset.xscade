@@ -97,7 +97,7 @@
 						<ed:State oid="!ed/2782/6384/EE4/54b549321be4"/>
 					</pragmas>
 				</State>
-				<State final="true" name="Launched">
+				<State name="Launched">
 					<locals>
 						<Variable name="_L2">
 							<type>

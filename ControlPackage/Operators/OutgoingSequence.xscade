@@ -13,7 +13,7 @@
 				<ed:Variable oid="!ed/2001/551B/82C/54a12f3444a8"/>
 			</pragmas>
 		</Variable>
-		<Variable name="gears_locked_down">
+		<Variable name="gears_locked_up">
 			<type>
 				<NamedType>
 					<type>
@@ -25,7 +25,7 @@
 				<ed:Variable oid="!ed/2170/551B/82C/54a134297550"/>
 			</pragmas>
 		</Variable>
-		<Variable name="doors_closed">
+		<Variable name="gears_locked_down">
 			<type>
 				<NamedType>
 					<type>
@@ -34,7 +34,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/2349/2993/880/54a17291a2a"/>
+				<ed:Variable oid="!ed/23f5/E0F/940/54b927aa5906"/>
 			</pragmas>
 		</Variable>
 		<Variable name="doors_open">
@@ -47,6 +47,18 @@
 			</type>
 			<pragmas>
 				<ed:Variable oid="!ed/2354/2993/880/54a172ac6824"/>
+			</pragmas>
+		</Variable>
+		<Variable name="doors_closed">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/2349/2993/880/54a17291a2a"/>
 			</pragmas>
 		</Variable>
 	</inputs>
@@ -476,12 +488,12 @@
 								<StateRef name="State1"/>
 							</target>
 							<condition>
-								<!-- gears_locked_down and doors_closed -->
+								<!-- gears_locked_up and doors_closed -->
 								<NAryOp name="9" operator="and">
 									<operands>
 										<IdExpression>
 											<path>
-												<ConstVarRef name="gears_locked_down"/>
+												<ConstVarRef name="gears_locked_up"/>
 											</path>
 										</IdExpression>
 										<IdExpression>
