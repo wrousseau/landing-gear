@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Operator xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1" kind="node" name="GearsLockedDownMonitoring">
+<Operator xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1" kind="node" name="And3">
 	<inputs>
-		<Variable name="front_gear_extended">
+		<Variable name="x1">
 			<type>
 				<NamedType>
 					<type>
@@ -13,7 +13,7 @@
 				<ed:Variable oid="!ed/85fe/614B/954/54a177c1df9"/>
 			</pragmas>
 		</Variable>
-		<Variable name="left_gear_extended">
+		<Variable name="x2">
 			<type>
 				<NamedType>
 					<type>
@@ -25,7 +25,7 @@
 				<ed:Variable oid="!ed/861d/614B/954/54a177d474ee"/>
 			</pragmas>
 		</Variable>
-		<Variable name="right_gear_extended">
+		<Variable name="x3">
 			<type>
 				<NamedType>
 					<type>
@@ -39,7 +39,7 @@
 		</Variable>
 	</inputs>
 	<outputs>
-		<Variable name="gears_locked_down">
+		<Variable name="y">
 			<type>
 				<NamedType>
 					<type>
@@ -141,7 +141,7 @@
 				<ed:Equation oid="!ed/85e0/614B/954/54a177afeb3"/>
 			</pragmas>
 		</Equation>
-		<!-- _L2 = front_gear_extended; -->
+		<!-- _L2 = x1; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L2"/>
@@ -149,7 +149,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="front_gear_extended"/>
+						<ConstVarRef name="x1"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -157,7 +157,7 @@
 				<ed:Equation oid="!ed/85ff/614B/954/54a177c179bb"/>
 			</pragmas>
 		</Equation>
-		<!-- _L3 = left_gear_extended; -->
+		<!-- _L3 = x2; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L3"/>
@@ -165,7 +165,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="left_gear_extended"/>
+						<ConstVarRef name="x2"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -173,7 +173,7 @@
 				<ed:Equation oid="!ed/861e/614B/954/54a177d47e61"/>
 			</pragmas>
 		</Equation>
-		<!-- _L4 = right_gear_extended; -->
+		<!-- _L4 = x3; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L4"/>
@@ -181,7 +181,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="right_gear_extended"/>
+						<ConstVarRef name="x3"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -215,10 +215,10 @@
 				<ed:Equation oid="!ed/8653/614B/954/54a177fe2c30"/>
 			</pragmas>
 		</Equation>
-		<!-- gears_locked_down = _L5; -->
+		<!-- y = _L5; -->
 		<Equation>
 			<lefts>
-				<VariableRef name="gears_locked_down"/>
+				<VariableRef name="y"/>
 			</lefts>
 			<right>
 				<IdExpression>
@@ -235,7 +235,7 @@
 	<pragmas>
 		<ed:Operator oid="!ed/85ce/614B/954/54a1778d26b4" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">
 			<diagrams>
-				<NetDiagram name="diagram_GearsLockedDownMonitoring_1" landscape="true" format="A4 (210 297)" oid="!ed/85cf/614B/954/54a1778d3f9c">
+				<NetDiagram name="diagram_And3_1" landscape="true" format="A4 (210 297)" oid="!ed/85cf/614B/954/54a1778d3f9c">
 					<presentationElements>
 						<EquationGE presentable="!ed/85e0/614B/954/54a177afeb3">
 							<position>
@@ -273,8 +273,8 @@
 							<positions>
 								<Point x="6959" y="2355"/>
 								<Point x="8731" y="2355"/>
-								<Point x="8731" y="2699"/>
-								<Point x="10504" y="2699"/>
+								<Point x="8731" y="2725"/>
+								<Point x="10504" y="2725"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/861e/614B/954/54a177d47e61" dstEquation="!ed/85e0/614B/954/54a177afeb3">
@@ -295,10 +295,10 @@
 						</EquationGE>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/85e0/614B/954/54a177afeb3" dstEquation="!ed/8653/614B/954/54a177fe2c30">
 							<positions>
-								<Point x="11800" y="2884"/>
+								<Point x="11827" y="2884"/>
 								<Point x="12330" y="2884"/>
-								<Point x="12330" y="4313"/>
-								<Point x="13203" y="4313"/>
+								<Point x="12330" y="4339"/>
+								<Point x="13203" y="4339"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="2" srcEquation="!ed/863d/614B/954/54a177e52eed" dstEquation="!ed/8653/614B/954/54a177fe2c30">
@@ -319,10 +319,10 @@
 						</EquationGE>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/8653/614B/954/54a177fe2c30" dstEquation="!ed/866a/614B/954/54a178161c65">
 							<positions>
-								<Point x="14737" y="4445"/>
-								<Point x="15478" y="4445"/>
-								<Point x="15478" y="4445"/>
-								<Point x="17436" y="4445"/>
+								<Point x="14764" y="4471"/>
+								<Point x="15478" y="4471"/>
+								<Point x="15478" y="4471"/>
+								<Point x="17436" y="4471"/>
 							</positions>
 						</Edge>
 					</presentationElements>

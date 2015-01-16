@@ -41,33 +41,7 @@
 				<Operator index="18" name="HealthMonitoringPackage::UnitMotionMonitoring"/>
 				<Operator index="19" name="HealthMonitoringPackage::TriplicatedMotionMonitoring"/>
 				<Operator index="20" name="HealthMonitoringPackage::GearsMotionMonitoring"/>
-				<Operator index="21" name="HealthMonitoringPackage::Monitoring">
-					<controls>
-						<StateMachine index="22" name="SM1">
-							<children>
-								<State index="23" name="State1">
-									<children>
-										<Transition index="24" name="&lt;1&gt;"/>
-										<Transition index="25" name="&lt;2&gt;"/>
-										<Transition index="26" name="&lt;3&gt;"/>
-									</children>
-								</State>
-								<State index="27" name="State2">
-									<children>
-										<Transition index="28" name="&lt;1&gt;"/>
-									</children>
-								</State>
-								<State index="29" name="State3">
-									<children>
-										<Transition index="30" name="&lt;1&gt;"/>
-									</children>
-								</State>
-								<State index="31" name="State4"/>
-							</children>
-						</StateMachine>
-					</controls>
-				</Operator>
-				<Operator index="32" name="HealthMonitoringPackage::GearsLockedDownMonitoring"/>
+				<Operator index="21" name="HealthMonitoringPackage::Monitoring"/>
 				<Operator index="33" name="HealthMonitoringPackage::GearsManeuveringMonitoring"/>
 				<Operator index="34" name="HealthMonitoringPackage::GenericBoolMonitoring">
 					<controls>
@@ -101,7 +75,7 @@
 						</StateMachine>
 					</controls>
 				</Operator>
-				<Operator index="48" name="HealthMonitoringPackage::CounterLaunchedByReset">
+				<Operator index="48" name="Utils::CounterLaunchedByReset">
 					<controls>
 						<StateMachine index="49" name="SM1">
 							<children>
