@@ -1,0 +1,16 @@
+{
+    "packagePrefix":"HealthMonitoringPackage::Monitoring/",
+		"rules":
+		[
+			{
+		    "step": 25,
+				"variable": "analogical_switch_1",
+				"expectedValue": false
+			},
+			{
+		    "step": 45,
+				"variable": "analogical_switch_1",
+				"expectedValue": true 
+			}
+		]
+}
