@@ -1,0 +1,9 @@
+### Requirement R31 testing scenario ###
+
+SSM::set ControlPackage::RetractionSequence/doors_open false      # The 3 doors are not open
+SSM::set ControlPackage::OutgoingSequence/doors_open false      # The 3 doors are not open
+SSM::cycle 500                                                    # Wait for ong enough
+
+# Output validation is done using the simulation output file
+SSM::check ControlPackage::OutgoingSequence/extend_EV false
+SSM::check ControlPackage::RetractionSequence/retract_EV false

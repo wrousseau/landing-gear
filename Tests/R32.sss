@@ -1,0 +1,13 @@
+### Requirement R32 testing scenario ###
+
+SSM::set ControlPackage::RetractionSequence/gears_locked_down false      # The 3 gears are not all locked down
+SSM::set ControlPackage::RetractionSequence/gears_locked_up false        # The 3 gears are not all locked up
+SSM::set ControlPackage::OutgoingSequence/gears_locked_down false      # The 3 gears are not all locked down
+SSM::set ControlPackage::OutgoingSequence/gears_locked_up false        # The 3 gears are not all locked up
+SSM::cycle 500                                                    # Wait for ong enough
+
+# Output validation is done using the simulation output file
+SSM::check ControlPackage::OutgoingSequence/open_EV false
+SSM::check ControlPackage::OutgoingSequence/close_EV false
+SSM::check ControlPackage::RetractionSequence/open_EV false
+SSM::check ControlPackage::RetractionSequence/close_EV false
