@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="186" defaultConfiguration="21">
+<Project id="1" oid_count="202" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -324,13 +324,6 @@
 								</Prop>
 							</props>
 						</FileRef>
-						<FileRef id="163" persistAs="HealthMonitoringPackage\Operators\GearsLockedDownMonitoring.xscade">
-							<props>
-								<Prop id="162" name="@SCADE:NONROOT">
-									<value>true</value>
-								</Prop>
-							</props>
-						</FileRef>
 						<FileRef id="169" persistAs="HealthMonitoringPackage\Operators\GearsManeuveringMonitoring.xscade">
 							<props>
 								<Prop id="168" name="@SCADE:NONROOT">
@@ -352,9 +345,16 @@
 								</Prop>
 							</props>
 						</FileRef>
-						<FileRef id="186" persistAs="HealthMonitoringPackage\Operators\CounterLaunchedByReset.xscade">
+						<FileRef id="195" persistAs="UtilsPackage\Operators\And3.xscade">
 							<props>
-								<Prop id="185" name="@SCADE:NONROOT">
+								<Prop id="194" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="201" persistAs="UtilsPackage\Operators\CounterLaunchedByReset.xscade">
+							<props>
+								<Prop id="200" name="@SCADE:NONROOT">
 									<value>true</value>
 								</Prop>
 							</props>
@@ -363,6 +363,8 @@
 				</Folder>
 				<FileRef id="107" persistAs="HealthMonitoringPackage\HealthMonitoringPackage.xscade"/>
 				<FileRef id="132" persistAs="ControlPackage\ControlPackage.xscade"/>
+				<FileRef id="189" persistAs="UtilsPackage\Utils.xscade"/>
+				<FileRef id="202" persistAs="Main.xscade"/>
 			</elements>
 		</Folder>
 		<Folder id="73" name="Design Verifier File">

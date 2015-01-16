@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Operator xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1" kind="node" name="And3">
 	<inputs>
-		<Variable name="front_gear_extended">
+		<Variable name="x1">
 			<type>
 				<NamedType>
 					<type>
@@ -13,7 +13,7 @@
 				<ed:Variable oid="!ed/85fe/614B/954/54a177c1df9"/>
 			</pragmas>
 		</Variable>
-		<Variable name="left_gear_extended">
+		<Variable name="x2">
 			<type>
 				<NamedType>
 					<type>
@@ -25,7 +25,7 @@
 				<ed:Variable oid="!ed/861d/614B/954/54a177d474ee"/>
 			</pragmas>
 		</Variable>
-		<Variable name="right_gear_extended">
+		<Variable name="x3">
 			<type>
 				<NamedType>
 					<type>
@@ -39,7 +39,7 @@
 		</Variable>
 	</inputs>
 	<outputs>
-		<Variable name="gears_locked_down">
+		<Variable name="y">
 			<type>
 				<NamedType>
 					<type>
@@ -141,7 +141,7 @@
 				<ed:Equation oid="!ed/85e0/614B/954/54a177afeb3"/>
 			</pragmas>
 		</Equation>
-		<!-- _L2 = front_gear_extended; -->
+		<!-- _L2 = x1; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L2"/>
@@ -149,7 +149,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="front_gear_extended"/>
+						<ConstVarRef name="x1"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -157,7 +157,7 @@
 				<ed:Equation oid="!ed/85ff/614B/954/54a177c179bb"/>
 			</pragmas>
 		</Equation>
-		<!-- _L3 = left_gear_extended; -->
+		<!-- _L3 = x2; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L3"/>
@@ -165,7 +165,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="left_gear_extended"/>
+						<ConstVarRef name="x2"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -173,7 +173,7 @@
 				<ed:Equation oid="!ed/861e/614B/954/54a177d47e61"/>
 			</pragmas>
 		</Equation>
-		<!-- _L4 = right_gear_extended; -->
+		<!-- _L4 = x3; -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L4"/>
@@ -181,7 +181,7 @@
 			<right>
 				<IdExpression>
 					<path>
-						<ConstVarRef name="right_gear_extended"/>
+						<ConstVarRef name="x3"/>
 					</path>
 				</IdExpression>
 			</right>
@@ -215,10 +215,10 @@
 				<ed:Equation oid="!ed/8653/614B/954/54a177fe2c30"/>
 			</pragmas>
 		</Equation>
-		<!-- gears_locked_down = _L5; -->
+		<!-- y = _L5; -->
 		<Equation>
 			<lefts>
-				<VariableRef name="gears_locked_down"/>
+				<VariableRef name="y"/>
 			</lefts>
 			<right>
 				<IdExpression>

@@ -980,18 +980,18 @@
 				<ed:Equation oid="!ed/2526/6384/EE4/54b5391c5b41"/>
 			</pragmas>
 		</Equation>
-		<!-- _L35 = CounterLaunchedByReset(_L5); -->
+		<!-- _L35 = Utils::CounterLaunchedByReset(_L5); -->
 		<Equation>
 			<lefts>
 				<VariableRef name="_L35"/>
 			</lefts>
 			<right>
-				<!-- CounterLaunchedByReset(_L5) -->
+				<!-- Utils::CounterLaunchedByReset(_L5) -->
 				<CallExpression>
 					<operator>
 						<OpCall name="1">
 							<operator>
-								<OperatorRef name="CounterLaunchedByReset"/>
+								<OperatorRef name="Utils::CounterLaunchedByReset"/>
 							</operator>
 						</OpCall>
 					</operator>
