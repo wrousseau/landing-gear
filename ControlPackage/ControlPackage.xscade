@@ -5,6 +5,7 @@
 			<declarations>
 				<Operator name="OutgoingSequence" href="Operators\OutgoingSequence.xscade"/>
 				<Operator name="RetractionSequence" href="Operators\RetractionSequence.xscade"/>
+				<Operator name="CommandLine" href="CommandLine.xscade"/>
 			</declarations>
 			<pragmas>
 				<ed:Package oid="!ed/1f9b/7272/B40/549166b71967" xmlns="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3">

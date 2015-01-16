@@ -13,7 +13,7 @@
 				<ed:Variable oid="!ed/22c4/2993/880/54a16db67eac"/>
 			</pragmas>
 		</Variable>
-		<Variable name="doors_open">
+		<Variable name="gears_locked_up">
 			<type>
 				<NamedType>
 					<type>
@@ -22,19 +22,7 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/22ca/2993/880/54a16db64f46"/>
-			</pragmas>
-		</Variable>
-		<Variable name="gear_shock_absorbers">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/2396/2993/880/54a173b92c84"/>
+				<ed:Variable oid="!ed/243e/E0F/940/54b92a68f91"/>
 			</pragmas>
 		</Variable>
 		<Variable name="gears_locked_down">
@@ -49,6 +37,18 @@
 				<ed:Variable oid="!ed/22dc/2993/880/54a16db62119"/>
 			</pragmas>
 		</Variable>
+		<Variable name="doors_open">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/22ca/2993/880/54a16db64f46"/>
+			</pragmas>
+		</Variable>
 		<Variable name="doors_closed">
 			<type>
 				<NamedType>
@@ -59,6 +59,18 @@
 			</type>
 			<pragmas>
 				<ed:Variable oid="!ed/2375/2993/880/54a173993a41"/>
+			</pragmas>
+		</Variable>
+		<Variable name="gear_shock_absorbers">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/2396/2993/880/54a173b92c84"/>
 			</pragmas>
 		</Variable>
 	</inputs>
@@ -280,7 +292,7 @@
 									<condition>
 										<IdExpression>
 											<path>
-												<ConstVarRef name="gears_locked_down"/>
+												<ConstVarRef name="gears_locked_up"/>
 											</path>
 										</IdExpression>
 									</condition>
@@ -776,15 +788,15 @@
 						</StateGE>
 						<StateGE presentable="!ed/22a7/2993/880/54a16d2962c0">
 							<position>
-								<Point x="26485" y="5662"/>
+								<Point x="27040" y="4101"/>
 							</position>
 							<size>
-								<Size width="2964" height="1957"/>
+								<Size width="3255" height="2328"/>
 							</size>
 						</StateGE>
 						<EquationGE presentable="!ed/22a8/2993/880/54a16d2958da">
 							<position>
-								<Point x="27755" y="6562"/>
+								<Point x="28310" y="5001"/>
 							</position>
 							<size>
 								<Size width="317" height="503"/>
@@ -792,7 +804,7 @@
 						</EquationGE>
 						<EquationGE kind="OBJ_LIT" presentable="!ed/22a9/2993/880/54a16d292a6d">
 							<position>
-								<Point x="27252" y="6668"/>
+								<Point x="27808" y="5106"/>
 							</position>
 							<size>
 								<Size width="211" height="317"/>
@@ -832,10 +844,10 @@
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/22a9/2993/880/54a16d292a6d" dstEquation="!ed/22a8/2993/880/54a16d2958da">
 							<positions>
-								<Point x="27464" y="6826"/>
-								<Point x="27623" y="6826"/>
-								<Point x="27623" y="6826"/>
-								<Point x="27808" y="6826"/>
+								<Point x="28019" y="5265"/>
+								<Point x="28178" y="5265"/>
+								<Point x="28178" y="5265"/>
+								<Point x="28363" y="5265"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/22a2/2993/880/54a16d2912ef" dstEquation="!ed/22a1/2993/880/54a16d295da5">
@@ -933,8 +945,8 @@
 							<positions>
 								<Point x="22490" y="3201"/>
 								<Point x="24686" y="3096"/>
-								<Point x="27940" y="5662"/>
-								<Point x="28019" y="5662"/>
+								<Point x="28654" y="4101"/>
+								<Point x="28734" y="4101"/>
 							</positions>
 							<labelSize>
 								<Size width="4763" height="635"/>
@@ -999,8 +1011,8 @@
 						</TransitionGE>
 						<TransitionGE presentable="!ed/22ab/2993/880/54a16d293479">
 							<positions>
-								<Point x="28443" y="7619"/>
-								<Point x="27384" y="8308"/>
+								<Point x="29184" y="6429"/>
+								<Point x="28125" y="7117"/>
 								<Point x="26961" y="8996"/>
 								<Point x="25903" y="9684"/>
 							</positions>
