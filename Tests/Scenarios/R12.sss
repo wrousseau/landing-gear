@@ -1,8 +1,28 @@
 ### Requirement R12 testing scenario ###
+### Testing the retraction sequence
 
-SSM::set ControlPackage::RetractionSequence/handle true       # Command handle is pushed UP
-SSM::cycle 150                                                # Wait for 15 s
+# Scenario takes place in normal mode
+SSM::set ControlPackage::CommandLine/normal_mode true
 
-# Output validation is done using the simulation output file
-SSM::check ControlPackage::RetractionSequence/gears_retracted true
-SSM::check ControlPackage::RetractionSequence/doors_closed true
+# Initial state should be :
+SSM::set ControlPackage::CommandLine/gears_locked_down true
+SSM::set ControlPackage::CommandLine/doors_closed true
+SSM::set ControlPackage::CommandLine/gear_shock_absorbers false		# The scenario deals with the case where the aircraft is NOT on the ground
+
+# Initiate outgoing sequence
+SSM::set ControlPackage::CommandLine/handle true
+
+# Doors opening sequence duration : 1.9 s (+20%)
+SSM::cycle 19
+SSM::set ControlPackage::CommandLine/doors_open true
+
+# Gears retracting sequence duration : 2.2s (+20%)
+SSM::cycle 22
+SSM::set ControlPackage::CommandLine/gears_locked_up true
+
+# Doors closing sequence duration : 1.9 s (+20%)
+SSM::cycle 19
+SSM::set ControlPackage::CommandLine/doors_closed true
+
+# End sequence
+SSM::cycle 90

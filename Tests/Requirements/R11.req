@@ -8,9 +8,9 @@
 				"expectedValue": true
 			},
 			{
-		    "step": 149
+		    "step": 149,
 				"variable": "doors_closed",
-				"expectedValue": true 
+				"expectedValue": true
 			}
 		]
 }
