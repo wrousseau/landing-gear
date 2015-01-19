@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Operator xmlns="http://www.esterel-technologies.com/ns/scade/3" xmlns:ed="http://www.esterel-technologies.com/ns/scade/pragmas/editor/3" xmlns:kcg="http://www.esterel-technologies.com/ns/scade/pragmas/codegen/1" kind="node" name="Monitoring">
 	<inputs>
-		<Variable name="analogical_switch">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/8976/47F1/720/54a178a73c03"/>
-			</pragmas>
-		</Variable>
 		<Variable name="handle">
 			<type>
 				<NamedType>
@@ -23,162 +11,6 @@
 			</type>
 			<pragmas>
 				<ed:Variable oid="!ed/8988/47F1/720/54a178a74bef"/>
-			</pragmas>
-		</Variable>
-		<Variable name="circuit_pressurized">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/89ca/47F1/720/54a178fe3728"/>
-			</pragmas>
-		</Variable>
-		<Variable name="general_EV_1">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/89dc/47F1/720/54a178fe2a8f"/>
-			</pragmas>
-		</Variable>
-		<Variable name="general_EV_2">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/89ef/47F1/720/54a179417582"/>
-			</pragmas>
-		</Variable>
-		<Variable name="front_door_closed">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/8a27/47F1/720/54a179a4c2b"/>
-			</pragmas>
-		</Variable>
-		<Variable name="left_door_closed">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/8a2d/47F1/720/54a179a427a0"/>
-			</pragmas>
-		</Variable>
-		<Variable name="right_door_closed">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/8a33/47F1/720/54a179a4481f"/>
-			</pragmas>
-		</Variable>
-		<Variable name="front_door_open">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/8a39/47F1/720/54a179a42622"/>
-			</pragmas>
-		</Variable>
-		<Variable name="left_door_open">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/8a3f/47F1/720/54a179a477ce"/>
-			</pragmas>
-		</Variable>
-		<Variable name="right_door_open">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/8a45/47F1/720/54a179a44ae1"/>
-			</pragmas>
-		</Variable>
-		<Variable name="close_EV_1">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/8a21/47F1/720/54a179a441d8"/>
-			</pragmas>
-		</Variable>
-		<Variable name="close_EV_2">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/8a47/47F1/720/54a179af3d2a"/>
-			</pragmas>
-		</Variable>
-		<Variable name="open_EV_1">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/8a1b/47F1/720/54a179a47540"/>
-			</pragmas>
-		</Variable>
-		<Variable name="open_EV_2">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/8a7f/47F1/720/54a17a4643f5"/>
 			</pragmas>
 		</Variable>
 		<Variable name="front_gear_retracted">
@@ -253,7 +85,7 @@
 				<ed:Variable oid="!ed/8ac7/47F1/720/54a17ae84831"/>
 			</pragmas>
 		</Variable>
-		<Variable name="retract_EV_1">
+		<Variable name="general_EV_1">
 			<type>
 				<NamedType>
 					<type>
@@ -262,10 +94,10 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/8acd/47F1/720/54a17ae84e07"/>
+				<ed:Variable oid="!ed/89dc/47F1/720/54a178fe2a8f"/>
 			</pragmas>
 		</Variable>
-		<Variable name="retract_EV_2">
+		<Variable name="open_EV_1">
 			<type>
 				<NamedType>
 					<type>
@@ -274,7 +106,19 @@
 				</NamedType>
 			</type>
 			<pragmas>
-				<ed:Variable oid="!ed/8ae0/47F1/720/54a17b1b2256"/>
+				<ed:Variable oid="!ed/8a1b/47F1/720/54a179a47540"/>
+			</pragmas>
+		</Variable>
+		<Variable name="close_EV_1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8a21/47F1/720/54a179a441d8"/>
 			</pragmas>
 		</Variable>
 		<Variable name="extend_EV_1">
@@ -289,6 +133,54 @@
 				<ed:Variable oid="!ed/8ad3/47F1/720/54a17ae82cb7"/>
 			</pragmas>
 		</Variable>
+		<Variable name="retract_EV_1">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8acd/47F1/720/54a17ae84e07"/>
+			</pragmas>
+		</Variable>
+		<Variable name="general_EV_2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/89ef/47F1/720/54a179417582"/>
+			</pragmas>
+		</Variable>
+		<Variable name="open_EV_2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8a7f/47F1/720/54a17a4643f5"/>
+			</pragmas>
+		</Variable>
+		<Variable name="close_EV_2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8a47/47F1/720/54a179af3d2a"/>
+			</pragmas>
+		</Variable>
 		<Variable name="extend_EV_2">
 			<type>
 				<NamedType>
@@ -299,6 +191,114 @@
 			</type>
 			<pragmas>
 				<ed:Variable oid="!ed/8ae1/47F1/720/54a17b254bc1"/>
+			</pragmas>
+		</Variable>
+		<Variable name="retract_EV_2">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8ae0/47F1/720/54a17b1b2256"/>
+			</pragmas>
+		</Variable>
+		<Variable name="front_door_open">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8a39/47F1/720/54a179a42622"/>
+			</pragmas>
+		</Variable>
+		<Variable name="left_door_open">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8a3f/47F1/720/54a179a477ce"/>
+			</pragmas>
+		</Variable>
+		<Variable name="right_door_open">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8a45/47F1/720/54a179a44ae1"/>
+			</pragmas>
+		</Variable>
+		<Variable name="front_door_closed">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8a27/47F1/720/54a179a4c2b"/>
+			</pragmas>
+		</Variable>
+		<Variable name="left_door_closed">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8a2d/47F1/720/54a179a427a0"/>
+			</pragmas>
+		</Variable>
+		<Variable name="right_door_closed">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8a33/47F1/720/54a179a4481f"/>
+			</pragmas>
+		</Variable>
+		<Variable name="analogical_switch">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/8976/47F1/720/54a178a73c03"/>
+			</pragmas>
+		</Variable>
+		<Variable name="circuit_pressurized">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/89ca/47F1/720/54a178fe3728"/>
 			</pragmas>
 		</Variable>
 	</inputs>

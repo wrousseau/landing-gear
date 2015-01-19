@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Project id="1" oid_count="202" defaultConfiguration="21">
+<Project id="1" oid_count="206" defaultConfiguration="21">
 	<props>
 		<Prop id="10" name="@STUDIO:PRODUCT">
 			<value>SC</value>
@@ -235,7 +235,7 @@
 			<value>false</value>
 		</Prop>
 		<Prop id="137" name="@GENERATOR:ROOTNODE">
-			<value>ControlPackage::CommandLine</value>
+			<value>Main</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="141" name="@GENERATOR:ROOTNODE">
@@ -366,6 +366,13 @@
 						<FileRef id="190" persistAs="ControlPackage\CommandLine.xscade">
 							<props>
 								<Prop id="189" name="@SCADE:NONROOT">
+									<value>true</value>
+								</Prop>
+							</props>
+						</FileRef>
+						<FileRef id="206" persistAs="HealthMonitoringPackage\Operators\TriplicationHandler.xscade">
+							<props>
+								<Prop id="205" name="@SCADE:NONROOT">
 									<value>true</value>
 								</Prop>
 							</props>

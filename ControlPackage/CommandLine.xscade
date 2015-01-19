@@ -49,6 +49,18 @@
 				<ed:Variable oid="!ed/2465/E0F/940/54b92c9c67a3"/>
 			</pragmas>
 		</Variable>
+		<Variable name="gear_shock_absorber">
+			<type>
+				<NamedType>
+					<type>
+						<TypeRef name="bool"/>
+					</type>
+				</NamedType>
+			</type>
+			<pragmas>
+				<ed:Variable oid="!ed/2468/E0F/940/54b92cb01678"/>
+			</pragmas>
+		</Variable>
 		<Variable name="doors_open">
 			<type>
 				<NamedType>
@@ -71,18 +83,6 @@
 			</type>
 			<pragmas>
 				<ed:Variable oid="!ed/2466/E0F/940/54b92ca4735c"/>
-			</pragmas>
-		</Variable>
-		<Variable name="gear_shock_absorber">
-			<type>
-				<NamedType>
-					<type>
-						<TypeRef name="bool"/>
-					</type>
-				</NamedType>
-			</type>
-			<pragmas>
-				<ed:Variable oid="!ed/2468/E0F/940/54b92cb01678"/>
 			</pragmas>
 		</Variable>
 	</inputs>
