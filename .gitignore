@@ -3,7 +3,7 @@
 *.htm
 Stimulation/*
 
-Tests/Raw/*
+
 !Tests/Raw/.gitkeep
 Tests/Results/*
 !Tests/Results/.gitkeep
