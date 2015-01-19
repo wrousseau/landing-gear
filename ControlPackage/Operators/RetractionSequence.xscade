@@ -271,11 +271,7 @@
 					<unless>
 						<Transition>
 							<condition>
-								<IdExpression>
-									<path>
-										<ConstVarRef name="gear_shock_absorbers"/>
-									</path>
-								</IdExpression>
+								<ConstValue value="true"/>
 							</condition>
 							<effect>
 								<Action>
@@ -287,14 +283,29 @@
 							<forks>
 								<ForkBranch kind="restart">
 									<target>
-										<StateRef name="State4"/>
+										<StateRef name="State40"/>
 									</target>
 									<condition>
-										<IdExpression>
-											<path>
-												<ConstVarRef name="gears_locked_up"/>
-											</path>
-										</IdExpression>
+										<!--  not gear_shock_absorbers and gears_locked_down -->
+										<NAryOp name="3" operator="and">
+											<operands>
+												<!--  not gear_shock_absorbers -->
+												<UnaryOp name="2" operator="not">
+													<operand>
+														<IdExpression>
+															<path>
+																<ConstVarRef name="gear_shock_absorbers"/>
+															</path>
+														</IdExpression>
+													</operand>
+												</UnaryOp>
+												<IdExpression>
+													<path>
+														<ConstVarRef name="gears_locked_down"/>
+													</path>
+												</IdExpression>
+											</operands>
+										</NAryOp>
 									</condition>
 									<pragmas>
 										<ed:ForkBranch oid="!ed/2296/2993/880/54a16d2962da"/>
@@ -305,7 +316,11 @@
 										<StateRef name="State5"/>
 									</target>
 									<condition>
-										<ConstValue value="true"/>
+										<IdExpression>
+											<path>
+												<ConstVarRef name="gear_shock_absorbers"/>
+											</path>
+										</IdExpression>
 									</condition>
 									<pragmas>
 										<ed:ForkBranch oid="!ed/2297/2993/880/54a16d2956b9"/>
@@ -504,17 +519,21 @@
 						<ed:State oid="!ed/22a5/2993/880/54a16d2930b2"/>
 					</pragmas>
 				</State>
-				<State name="State4">
+				<State name="State40">
 					<unless>
 						<Transition kind="restart">
 							<target>
-								<StateRef name="State6"/>
+								<StateRef name="State41"/>
 							</target>
 							<condition>
-								<ConstValue value="true"/>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="gears_locked_up"/>
+									</path>
+								</IdExpression>
 							</condition>
 							<pragmas>
-								<ed:Transition oid="!ed/22ab/2993/880/54a16d293479"/>
+								<ed:Transition oid="!ed/261a/352A/6A0/54bd2f634594"/>
 							</pragmas>
 						</Transition>
 					</unless>
@@ -549,13 +568,13 @@
 								<ed:Equation oid="!ed/22a8/2993/880/54a16d2958da"/>
 							</pragmas>
 						</Equation>
-						<!-- _L1 = false; -->
+						<!-- _L1 = true; -->
 						<Equation>
 							<lefts>
 								<VariableRef name="_L1"/>
 							</lefts>
 							<right>
-								<ConstValue value="false"/>
+								<ConstValue value="true"/>
 							</right>
 							<pragmas>
 								<ed:Equation oid="!ed/22a9/2993/880/54a16d292a6d"/>
@@ -639,6 +658,68 @@
 						<ed:State oid="!ed/22ac/2993/880/54a16d294859"/>
 					</pragmas>
 				</State>
+				<State name="State41">
+					<unless>
+						<Transition kind="restart">
+							<target>
+								<StateRef name="State6"/>
+							</target>
+							<condition>
+								<ConstValue value="true"/>
+							</condition>
+							<pragmas>
+								<ed:Transition oid="!ed/261b/352A/6A0/54bd2f67506a"/>
+							</pragmas>
+						</Transition>
+					</unless>
+					<locals>
+						<Variable name="_L1">
+							<type>
+								<NamedType>
+									<type>
+										<TypeRef name="bool"/>
+									</type>
+								</NamedType>
+							</type>
+							<pragmas>
+								<ed:Variable oid="!ed/2608/352A/6A0/54bd2f574c05"/>
+							</pragmas>
+						</Variable>
+					</locals>
+					<data>
+						<!-- retract_EV = _L1; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="retract_EV"/>
+							</lefts>
+							<right>
+								<IdExpression>
+									<path>
+										<ConstVarRef name="_L1"/>
+									</path>
+								</IdExpression>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/25fa/352A/6A0/54bd2f4b31e9"/>
+							</pragmas>
+						</Equation>
+						<!-- _L1 = false; -->
+						<Equation>
+							<lefts>
+								<VariableRef name="_L1"/>
+							</lefts>
+							<right>
+								<ConstValue value="false"/>
+							</right>
+							<pragmas>
+								<ed:Equation oid="!ed/2607/352A/6A0/54bd2f5754b7"/>
+							</pragmas>
+						</Equation>
+					</data>
+					<pragmas>
+						<ed:State oid="!ed/25e5/352A/6A0/54bd2f173514"/>
+					</pragmas>
+				</State>
 			</states>
 			<pragmas>
 				<ed:StateMachine oid="!ed/2289/2993/880/54a16d297b3c"/>
@@ -655,7 +736,7 @@
 								<Point x="1614" y="900"/>
 							</position>
 							<size>
-								<Size width="29660" height="13070"/>
+								<Size width="30903" height="13070"/>
 							</size>
 						</StateMachineGE>
 						<StateGE presentable="!ed/228a/2993/880/54a16d293d5e">
@@ -716,7 +797,7 @@
 						</StateGE>
 						<StateGE presentable="!ed/2299/2993/880/54a16d291097">
 							<position>
-								<Point x="19076" y="5503"/>
+								<Point x="18600" y="5106"/>
 							</position>
 							<size>
 								<Size width="3969" height="1640"/>
@@ -724,7 +805,7 @@
 						</StateGE>
 						<EquationGE presentable="!ed/229a/2993/880/54a16d2921a2">
 							<position>
-								<Point x="21273" y="6191"/>
+								<Point x="20796" y="5794"/>
 							</position>
 							<size>
 								<Size width="317" height="503"/>
@@ -732,7 +813,7 @@
 						</EquationGE>
 						<EquationGE kind="OBJ_LIT" presentable="!ed/229b/2993/880/54a16d292dcc">
 							<position>
-								<Point x="20108" y="6297"/>
+								<Point x="19632" y="5900"/>
 							</position>
 							<size>
 								<Size width="211" height="318"/>
@@ -788,7 +869,7 @@
 						</StateGE>
 						<StateGE presentable="!ed/22a7/2993/880/54a16d2962c0">
 							<position>
-								<Point x="27040" y="4101"/>
+								<Point x="26644" y="3440"/>
 							</position>
 							<size>
 								<Size width="3255" height="2328"/>
@@ -796,7 +877,7 @@
 						</StateGE>
 						<EquationGE presentable="!ed/22a8/2993/880/54a16d2958da">
 							<position>
-								<Point x="28310" y="5001"/>
+								<Point x="27914" y="4339"/>
 							</position>
 							<size>
 								<Size width="317" height="503"/>
@@ -804,7 +885,7 @@
 						</EquationGE>
 						<EquationGE kind="OBJ_LIT" presentable="!ed/22a9/2993/880/54a16d292a6d">
 							<position>
-								<Point x="27808" y="5106"/>
+								<Point x="27411" y="4445"/>
 							</position>
 							<size>
 								<Size width="211" height="317"/>
@@ -812,7 +893,7 @@
 						</EquationGE>
 						<StateGE presentable="!ed/22ac/2993/880/54a16d294859">
 							<position>
-								<Point x="24051" y="9684"/>
+								<Point x="21484" y="8811"/>
 							</position>
 							<size>
 								<Size width="2805" height="1720"/>
@@ -820,7 +901,7 @@
 						</StateGE>
 						<EquationGE presentable="!ed/22ad/2993/880/54a16d294633">
 							<position>
-								<Point x="25188" y="10742"/>
+								<Point x="22622" y="9869"/>
 							</position>
 							<size>
 								<Size width="317" height="502"/>
@@ -828,7 +909,7 @@
 						</EquationGE>
 						<EquationGE kind="OBJ_LIT" presentable="!ed/22ae/2993/880/54a16d294465">
 							<position>
-								<Point x="24791" y="10372"/>
+								<Point x="22225" y="9499"/>
 							</position>
 							<size>
 								<Size width="212" height="318"/>
@@ -836,18 +917,18 @@
 						</EquationGE>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/22ae/2993/880/54a16d294465" dstEquation="!ed/22ad/2993/880/54a16d294633">
 							<positions>
-								<Point x="25003" y="10530"/>
-								<Point x="25083" y="10530"/>
-								<Point x="25083" y="11007"/>
-								<Point x="25241" y="11007"/>
+								<Point x="22437" y="9657"/>
+								<Point x="22516" y="9657"/>
+								<Point x="22516" y="10134"/>
+								<Point x="22675" y="10134"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/22a9/2993/880/54a16d292a6d" dstEquation="!ed/22a8/2993/880/54a16d2958da">
 							<positions>
-								<Point x="28019" y="5265"/>
-								<Point x="28178" y="5265"/>
-								<Point x="28178" y="5265"/>
-								<Point x="28363" y="5265"/>
+								<Point x="27623" y="4604"/>
+								<Point x="27781" y="4604"/>
+								<Point x="27781" y="4604"/>
+								<Point x="27966" y="4604"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/22a2/2993/880/54a16d2912ef" dstEquation="!ed/22a1/2993/880/54a16d295da5">
@@ -868,10 +949,10 @@
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/229b/2993/880/54a16d292dcc" dstEquation="!ed/229a/2993/880/54a16d2921a2">
 							<positions>
-								<Point x="20320" y="6456"/>
-								<Point x="20823" y="6456"/>
-								<Point x="20823" y="6456"/>
-								<Point x="21325" y="6456"/>
+								<Point x="19844" y="6059"/>
+								<Point x="20346" y="6059"/>
+								<Point x="20346" y="6059"/>
+								<Point x="20849" y="6059"/>
 							</positions>
 						</Edge>
 						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2290/2993/880/54a16d2960b0" dstEquation="!ed/228f/2993/880/54a16d293324">
@@ -928,34 +1009,34 @@
 							<positions>
 								<Point x="22490" y="3201"/>
 								<Point x="22648" y="4895"/>
-								<Point x="21008" y="3810"/>
-								<Point x="21220" y="5503"/>
+								<Point x="20532" y="3413"/>
+								<Point x="20743" y="5106"/>
 							</positions>
 							<labelSize>
-								<Size width="1535" height="370"/>
+								<Size width="4022" height="1588"/>
 							</labelSize>
 							<labelPos>
-								<Point x="21722" y="4789"/>
+								<Point x="18018" y="4154"/>
 							</labelPos>
 							<slashPos>
-								<Point x="22463" y="4789"/>
+								<Point x="21246" y="4154"/>
 							</slashPos>
 						</TransitionGE>
 						<TransitionGE presentable="!ed/2296/2993/880/54a16d2962da">
 							<positions>
 								<Point x="22490" y="3201"/>
 								<Point x="24686" y="3096"/>
-								<Point x="28654" y="4101"/>
-								<Point x="28734" y="4101"/>
+								<Point x="28258" y="3440"/>
+								<Point x="28337" y="3440"/>
 							</positions>
 							<labelSize>
 								<Size width="4763" height="635"/>
 							</labelSize>
 							<labelPos>
-								<Point x="25135" y="2805"/>
+								<Point x="24050" y="2196"/>
 							</labelPos>
 							<slashPos>
-								<Point x="29104" y="2805"/>
+								<Point x="28019" y="2196"/>
 							</slashPos>
 						</TransitionGE>
 						<TransitionGE presentable="!ed/2295/2993/880/54a16d294fdf">
@@ -966,30 +1047,30 @@
 								<Point x="22490" y="3201"/>
 							</positions>
 							<labelSize>
-								<Size width="5450" height="318"/>
+								<Size width="2619" height="318"/>
 							</labelSize>
 							<labelPos>
-								<Point x="21960" y="1720"/>
+								<Point x="21537" y="1958"/>
 							</labelPos>
 							<slashPos>
-								<Point x="26353" y="1720"/>
+								<Point x="23363" y="1958"/>
 							</slashPos>
 						</TransitionGE>
 						<TransitionGE presentable="!ed/229d/2993/880/54a16d2956c9">
 							<positions>
-								<Point x="21008" y="7143"/>
-								<Point x="22225" y="7699"/>
-								<Point x="23733" y="9102"/>
-								<Point x="25003" y="9684"/>
+								<Point x="20532" y="6746"/>
+								<Point x="21749" y="7303"/>
+								<Point x="21167" y="8229"/>
+								<Point x="22437" y="8811"/>
 							</positions>
 							<labelSize>
 								<Size width="1535" height="370"/>
 							</labelSize>
 							<labelPos>
-								<Point x="22066" y="9684"/>
+								<Point x="19922" y="8096"/>
 							</labelPos>
 							<slashPos>
-								<Point x="22807" y="9684"/>
+								<Point x="20664" y="8096"/>
 							</slashPos>
 						</TransitionGE>
 						<TransitionGE presentable="!ed/22a6/2993/880/54a16d291271">
@@ -1009,27 +1090,10 @@
 								<Point x="5265" y="6615"/>
 							</slashPos>
 						</TransitionGE>
-						<TransitionGE presentable="!ed/22ab/2993/880/54a16d293479">
-							<positions>
-								<Point x="29184" y="6429"/>
-								<Point x="28125" y="7117"/>
-								<Point x="26961" y="8996"/>
-								<Point x="25903" y="9684"/>
-							</positions>
-							<labelSize>
-								<Size width="1535" height="370"/>
-							</labelSize>
-							<labelPos>
-								<Point x="27013" y="8705"/>
-							</labelPos>
-							<slashPos>
-								<Point x="27755" y="8705"/>
-							</slashPos>
-						</TransitionGE>
 						<TransitionGE presentable="!ed/22b0/2993/880/54a16d296237">
 							<positions>
-								<Point x="25400" y="11404"/>
-								<Point x="25718" y="13150"/>
+								<Point x="22834" y="10530"/>
+								<Point x="23151" y="12277"/>
 								<Point x="17754" y="9684"/>
 								<Point x="15002" y="9710"/>
 							</positions>
@@ -1037,10 +1101,76 @@
 								<Size width="3969" height="2223"/>
 							</labelSize>
 							<labelPos>
-								<Point x="16802" y="10820"/>
+								<Point x="16246" y="11534"/>
 							</labelPos>
 							<slashPos>
-								<Point x="19870" y="10821"/>
+								<Point x="19315" y="11536"/>
+							</slashPos>
+						</TransitionGE>
+						<StateGE presentable="!ed/25e5/352A/6A0/54bd2f173514">
+							<position>
+								<Point x="26644" y="7858"/>
+							</position>
+							<size>
+								<Size width="3492" height="1773"/>
+							</size>
+						</StateGE>
+						<EquationGE presentable="!ed/25fa/352A/6A0/54bd2f4b31e9">
+							<position>
+								<Point x="28072" y="8652"/>
+							</position>
+							<size>
+								<Size width="318" height="503"/>
+							</size>
+						</EquationGE>
+						<EquationGE kind="OBJ_LIT" presentable="!ed/2607/352A/6A0/54bd2f5754b7">
+							<position>
+								<Point x="27543" y="8758"/>
+							</position>
+							<size>
+								<Size width="211" height="318"/>
+							</size>
+						</EquationGE>
+						<Edge leftVarIndex="1" rightExprIndex="1" srcEquation="!ed/2607/352A/6A0/54bd2f5754b7" dstEquation="!ed/25fa/352A/6A0/54bd2f4b31e9">
+							<positions>
+								<Point x="27755" y="8916"/>
+								<Point x="27940" y="8916"/>
+								<Point x="27940" y="8916"/>
+								<Point x="28125" y="8916"/>
+							</positions>
+						</Edge>
+						<TransitionGE presentable="!ed/261a/352A/6A0/54bd2f634594">
+							<positions>
+								<Point x="28469" y="5768"/>
+								<Point x="29528" y="6297"/>
+								<Point x="29554" y="6985"/>
+								<Point x="28549" y="7858"/>
+							</positions>
+							<labelSize>
+								<Size width="2778" height="953"/>
+							</labelSize>
+							<labelPos>
+								<Point x="29343" y="6483"/>
+							</labelPos>
+							<slashPos>
+								<Point x="31327" y="6482"/>
+							</slashPos>
+						</TransitionGE>
+						<TransitionGE presentable="!ed/261b/352A/6A0/54bd2f67506a">
+							<positions>
+								<Point x="27940" y="9631"/>
+								<Point x="27173" y="10425"/>
+								<Point x="25956" y="10504"/>
+								<Point x="24289" y="9895"/>
+							</positions>
+							<labelSize>
+								<Size width="1535" height="370"/>
+							</labelSize>
+							<labelPos>
+								<Point x="25823" y="10900"/>
+							</labelPos>
+							<slashPos>
+								<Point x="26564" y="10901"/>
 							</slashPos>
 						</TransitionGE>
 					</presentationElements>
