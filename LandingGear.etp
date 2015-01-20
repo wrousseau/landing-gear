@@ -235,7 +235,7 @@
 			<value>false</value>
 		</Prop>
 		<Prop id="137" name="@GENERATOR:ROOTNODE">
-			<value>Main</value>
+			<value>HealthMonitoringPackage::Monitoring</value>
 			<configuration>21</configuration>
 		</Prop>
 		<Prop id="141" name="@GENERATOR:ROOTNODE">
