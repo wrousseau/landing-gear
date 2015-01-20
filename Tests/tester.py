@@ -73,7 +73,7 @@ def test_requirement(requirement_id):
 
 def main(argv):
     parser = argparse.ArgumentParser('Tests a scade test result file against a given requirement')
-    parser.add_argument('--requirement', required=False, help='The requirement id under the valid format : Rxx\n The given id should match :\n a requirement file : Requirements/Rxx.req\n a raw results file : Raw/Rxx.req')
+    parser.add_argument('--requirement', required=False, help='The requirement id under the valid format : Rxx. The given id should match a requirement file (Requirements/Rxx.req) and a raw results file (Raw/Rxx.req)')
     named_args = parser.parse_args()
 
     global test_result_file
