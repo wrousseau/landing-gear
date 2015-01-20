@@ -158,7 +158,7 @@
 										<Transition index="80" name="&lt;1&gt;"/>
 									</children>
 								</State>
-								<State index="81" name="State4">
+								<State index="81" name="State40">
 									<children>
 										<Transition index="82" name="&lt;1&gt;"/>
 									</children>
